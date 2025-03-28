@@ -9,10 +9,10 @@ const HomePage: React.FC = () => {
   return (
     <div>
       <main>
-        <HomeSection id="home" title="homeTest" />
-        <AboutSection id="about" title="Abouttest" />
-        <ProjectsSection id="projects" title="projectTest" />
-        <ContactSection id  ="contact" title="contactTest" />
+        <HomeSection title="HomeTest" />
+        <AboutSection title="Abouttest" />
+        <ProjectsSection title="projectTest" />
+        <ContactSection title="contactTest" />
       </main>
     </div>
   );
