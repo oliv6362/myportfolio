@@ -1,12 +1,21 @@
+// src/pages/HomePage.tsx
 import React from 'react';
+import AboutSection from '../components/aboutSection';
+import ProjectsSection from '../components/projectSection';
+import ContactSection from '../components/contactSection';
+import HomeSection from '../components/homeSection';
 
 const HomePage: React.FC = () => {
-    return (
-        <div style={{ textAlign: 'center', padding: '20px' }}>
-    <h1 className="text-3xl font-bold underline">Welcome to My Portfolio</h1>
-            <p>This is the home page of my portfolio website.</p>
-        </div>
-    );
+  return (
+    <div>
+      <main>
+        <HomeSection id="home" title="homeTest" />
+        <AboutSection id="about" title="Abouttest" />
+        <ProjectsSection id="projects" title="projectTest" />
+        <ContactSection id  ="contact" title="contactTest" />
+      </main>
+    </div>
+  );
 };
 
 export default HomePage;
