@@ -16,8 +16,11 @@ const ProjectSection: React.FC<ProjectSectionProps> = ({id, title}) => {
 
     return (
         <section id="projects">
-            <h1>{title}</h1>
-
+            <div className="flex mx-auto h-screen items-center justify-center">
+                <div className="text-center">
+                    <h1>{title}</h1>
+                </div>
+            </div>
         </section>
     );
 };
