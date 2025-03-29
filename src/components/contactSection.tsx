@@ -12,7 +12,7 @@ interface ContactSectionProps {
 */
 const ContactSection: React.FC<ContactSectionProps> = ({title }) => {
     return (
-        <section id="contact">
+        <section id="contact" className="bg-green-500">
             <div className="flex mx-auto h-screen items-center justify-center">
                 <div className="text-center">
                     <h1>{title}</h1>

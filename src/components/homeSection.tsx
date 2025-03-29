@@ -13,7 +13,7 @@ interface HomeSectionProps {
 */
 const HomeSection: React.FC<HomeSectionProps> = ({title }) => {
     return (
-        <section id="home">
+        <section id="home" >
             <div className="flex mx-auto h-screen items-center justify-center">
                 <div className="text-center">
                     <h1>{title}</h1>

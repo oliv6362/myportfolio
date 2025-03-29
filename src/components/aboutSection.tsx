@@ -12,7 +12,7 @@ interface AboutSectionProps {
 */
 const AboutSection: React.FC<AboutSectionProps> = ({ title }) => {
     return (
-        <section id="about">
+        <section id="about" className="bg-lime-400">
             <div className="flex mx-auto h-screen items-center justify-center">
                 <div className="text-center">
                     <h1>{title}</h1>
