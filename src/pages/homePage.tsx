@@ -9,7 +9,7 @@ const HomePage: React.FC = () => {
   return (
     <div>
       <main>
-        <HomeSection title="HomeTest" />
+        <HomeSection/>
         <AboutSection title="Abouttest" />
         <ProjectsSection title="projectTest" />
         <ContactSection title="contactTest" />

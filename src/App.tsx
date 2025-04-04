@@ -1,11 +1,7 @@
 
 import { Routes, Route } from 'react-router-dom';
-
 import HomePage from './pages/homePage';
-
 import Header from './components/header';
-
-import './assets/styles/homeStyle.css';
 
 function App() {
   return (

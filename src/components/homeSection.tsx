@@ -1,33 +1,36 @@
-import image1 from '../assets/images/placeholder.png';
 import React from 'react';
+import image1 from '../assets/images/placeholder.png';
+import Typewriter from './typewriter';
 import Social from './social';
 
-//props
-interface HomeSectionProps {
-    title?: string;
-}
+const HomeSection: React.FC = () => {
+    const titles = [
+        ' Software Developer',
+        ' Full Stack Developer',
+        ' Game Developer',
+        ' Web Developer',
+        ' Front End Developer',
+        ' Back End Developer',
+    ];
 
-/** 
-* A simple AboutSection component showcasing basic TypeScript usage.
-* 
-* @param {string} [title] - An optional title to display at the top of the section.
-*/
-const HomeSection: React.FC<HomeSectionProps> = ({ title }) => {
     return (
-        <section id="home" >
+        <section id="home" className="bg-[#011533]">
             <div className="flex mx-auto h-screen items-center justify-center">
-                <section className="max-w-4xl">
+                <section className="max-w-2xl mr-20">
                     <div>
                         <h1 className="text-4xl font-bold ">Hi, I am Oliver Nordby Hansen</h1>
-                        <h1 className="text-blue-600 text-4xl font-bold ">I'm a {title}</h1>
-                        <p className="text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer elementum mattis nisl sed volutpat. Donec quis augue vitae nisi malesuada convallis. Vestibulum posuere, mauris et congue sodales, diam justo blandit lacus, ac pharetra mi augue a ante. In quis venenatis metus, eget feugiat quam. Morbi sed varius risus, in tempus libero.</p>
+                        <h1 className="text-green-700 text-4xl font-bold ">I'm a
+                            <Typewriter texts={titles} delay={100} infinite/>
+                        </h1>
+                        <p className="text-lg mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer elementum mattis nisl sed volutpat. Donec quis augue vitae nisi malesuada convallis.</p>
                     </div>
 
-                    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4">Contact Me</button>
                     <Social />
+
+                    <button className="h-12 px-8 mt-4 text-lg transition-colors duration-500 bg-green-700 hover:bg-green-900 rounded-lg focus:shadow-outline">Let's Connect </button>
                 </section>
 
-                <div className="flex justify-center h-48 w-96 object-contain">
+                <div className="flex justify-center h-98 w-96 object-contain">
                     <img src={image1} alt="placeholder" />
                 </div>
 
@@ -35,7 +38,5 @@ const HomeSection: React.FC<HomeSectionProps> = ({ title }) => {
         </section>
     );
 };
-
-
 
 export default HomeSection;
