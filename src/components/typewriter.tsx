@@ -35,7 +35,7 @@ const Typewriter: React.FC<TypewriterProps> = ({texts, delay = 100, infinite = f
   const currentText = texts[currentTextIndex];
 
   useEffect(() => {
-    let timeout: NodeJS.Timeout;
+    let timeout: number;
 
     if (!isDeleting && currentCharIndex < currentText.length) {
       // Typing phase: add one character.
