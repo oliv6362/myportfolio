@@ -27,7 +27,9 @@ const HomeSection: React.FC = () => {
 
                     <Social />
 
-                    <button className="h-12 px-8 mt-4 text-lg transition-colors duration-500 bg-green-700 hover:bg-green-900 rounded-lg focus:shadow-outline">Let's Connect </button>
+                    <button className="mt-4">
+                        <a href="#contact" className="inline-flex items-center justify-center h-12 px-12 text-lg transition-colors duration-500 bg-green-700 hover:bg-green-900 rounded-lg focus:shadow-outline">Let's Connect</a>
+                    </button>
                 </section>
 
                 <div className="flex justify-center h-98 w-96 object-contain">
