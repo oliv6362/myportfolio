@@ -14,7 +14,7 @@ const Header: React.FC = () => {
                     </ul>
                 </div>
             </nav>
-            <hr className=" h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-25 dark:via-neutral-400" />
+            <hr className="h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-25 dark:via-neutral-400" />
         </header>
     );
 };

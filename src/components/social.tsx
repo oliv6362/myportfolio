@@ -1,5 +1,5 @@
 import React from "react";
-import {FaLinkedin, FaGithubSquare  } from "react-icons/fa";
+import {FaLinkedin, FaGithubSquare} from "react-icons/fa";
 
 const Social: React.FC = () => {
     return (
