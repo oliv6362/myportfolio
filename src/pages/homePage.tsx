@@ -7,14 +7,12 @@ import HomeSection from '../components/homeSection';
 
 const HomePage: React.FC = () => {
   return (
-    <div>
       <main>
         <HomeSection/>
-        <AboutSection title="Abouttest" />
+        <AboutSection/>
         <ProjectsSection title="projectTest" />
         <ContactSection title="contactTest" />
       </main>
-    </div>
   );
 };
 

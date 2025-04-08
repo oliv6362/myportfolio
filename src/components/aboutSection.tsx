@@ -1,23 +1,34 @@
 import React from 'react';
+import image1 from '../assets/images/placeholder.png';
+import EducationPart from './parts/educationPart';
+import ExperiencePart from './parts/experiencePart';
+import StackPart from './parts/stackPart';
 
-//Props
-interface AboutSectionProps {
-    title?: string;
-}
 
-/** 
-* A simple AboutSection component showcasing basic TypeScript usage.
-* 
-* @param {string} [title] - An optional title to display at the top of the section.
-*/
-const AboutSection: React.FC<AboutSectionProps> = ({ title }) => {
+const AboutSection: React.FC = () => {
     return (
-        <section id="about" className="bg-[#051937]">
-            <div className="flex mx-auto h-screen items-center justify-center">
-                <div className="text-center">
-                    <h1>{title}</h1>
+        <section id="about" className="bg-[#051937] h-screen">
+            <div className="flex mx-auto justify-center py-20">
+
+                <div className="flex justify-center h-98 w-96 object-contain mr-20">
+                    <img className='rounded-lg' src={image1} alt="placeholder" />
                 </div>
+
+                <article className="max-w-2xl">
+                    <h1 className="text-4xl font-bold text-green-700">About me</h1>
+                    <p className="text-lg mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tincidunt odio sed orci lobortis, vitae tincidunt est lobortis.
+                        In at malesuada est. Aenean sit amet laoreet orci. Nullam porta ex eu condimentum auctor. Phasellus ut quam orci. Suspendisse non magna feugiat,
+                        pulvinar mauris eu, efficitur dui.
+                    </p>
+                    <p className="text-lg mt-4">Nulla vehicula, lectus eget elementum pharetra, sapien arcu interdum urna, in ullamcorper massa erat a est.
+                        Nam at pretium quam.
+                    </p>
+                </article>
             </div>
+
+            <EducationPart />
+            <ExperiencePart />
+            <StackPart />
 
         </section>
     );
