@@ -48,7 +48,7 @@ const Typewriter: React.FC<TypewriterProps> = ({texts, delay = 100, infinite = f
       if (infinite) {
         timeout = setTimeout(() => {
           setIsDeleting(true);
-        }, delay * 5);
+        }, delay * 50);
       }
 
     } else if (isDeleting && currentCharIndex > 0) {

@@ -18,11 +18,13 @@ const HomeSection: React.FC = () => {
             <div className="flex mx-auto h-screen items-center justify-center">
                 <section className="max-w-2xl mr-20">
                     <div>
-                        <h1 className="text-4xl font-bold ">Hi, I am Oliver Nordby Hansen</h1>
+                        <h1 className="text-4xl font-bold ">Hello! I am Oliver Nordby Hansen</h1>
                         <h1 className="text-green-700 text-4xl font-bold ">I'm a
-                            <Typewriter texts={titles} delay={100} infinite/>
+                            <Typewriter texts={titles} delay={50} infinite/>
                         </h1>
-                        <p className="text-lg mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer elementum mattis nisl sed volutpat. Donec quis augue vitae nisi malesuada convallis.</p>
+                        <p className="text-lg mt-4">Focused and passionate AP Graduate in Computer Science with a love for IT and Programming. 
+                            In this field, I strive to be solution-oriented, flexible, and maintain an analytical, structured, and systematic mindset.
+                        </p>
                     </div>
 
                     <Social />
