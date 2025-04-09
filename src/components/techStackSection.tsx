@@ -1,4 +1,27 @@
 const TechStackSection: React.FC = () => {
+
+    const techStackBackend = [
+        { name: "C#", experience: "3 years" },
+        { name: "Java", experience: "3 years" },
+        { name: "Python", experience: "3 years" },
+        { name: "Node.js", experience: "3 years" },
+        { name: "Express", experience: "3 years" },
+        { name: "MongoDB", experience: "3 years" },
+    ];
+
+    const techStackFrontend = [
+        { name: "JavaScript", experience: "x years" },
+        { name: "TypeScript", experience: "x years" },
+        { name: "React", experience: "x years" },
+        { name: "Redux", experience: "x years" },
+        { name: "HTML", experience: "x years" },
+        { name: "CSS", experience: "x years" },
+        { name: "Tailwind CSS", experience: "x years" },
+        { name: "Bootstrap", experience: "x years" },
+        { name: "Next.js", experience: "x years" },
+        { name: "Jest", experience: "x years" },
+    ];
+
     return (
         <section id="about" className="bg-[#011533] h-screen ">
             <div className="max-w-2xl mx-auto px-4 py-20">
@@ -9,16 +32,14 @@ const TechStackSection: React.FC = () => {
                     <div className="bg-sky-700 p-6 rounded-lg shadow text-center hover:bg-sky-800 hover:scale-105 transition-transform duration-300">
                         <h2 className="text-3xl font-semibold mb-4">Frontend</h2>
                         <ul className="space-y-2">
-                            <li><h3 className="text-2xl font-semibold mb-4">JavaScript</h3></li>
-                            <li><h3 className="text-2xl font-semibold mb-4">TypeScript</h3></li>
-                            <li><h3 className="text-2xl font-semibold mb-4">React</h3></li>
-                            <li><h3 className="text-2xl font-semibold mb-4">Redux</h3></li>
-                            <li><h3 className="text-2xl font-semibold mb-4">HTML</h3></li>
-                            <li><h3 className="text-2xl font-semibold mb-4">CSS</h3></li>
-                            <li><h3 className="text-2xl font-semibold mb-4">Tailwind CSS</h3></li>
-                            <li><h3 className="text-2xl font-semibold mb-4">Bootstrap</h3></li>
-                            <li><h3 className="text-2xl font-semibold mb-4">Next.js</h3></li>
-                            <li><h3 className="text-2xl font-semibold mb-4">Jest</h3></li>
+                            <li>
+                                {techStackFrontend.map((tech, index) => (
+                                    <div key={index} className="mt-4">
+                                        <h3 className="text-2xl font-semibold mt-2">{tech.name}</h3>
+                                        <p className="text-md">{tech.experience} of experience</p>
+                                    </div>
+                                ))}
+                            </li>
                         </ul>
                     </div>
 
@@ -26,18 +47,19 @@ const TechStackSection: React.FC = () => {
                     <div className="bg-sky-700 p-6 rounded-lg shadow text-center hover:bg-sky-800 hover:scale-105 transition-transform duration-300">
                         <h2 className="text-3xl font-semibold mb-4">Backend</h2>
                         <ul className="space-y-2">
-                            <li><h3 className="text-2xl font-semibold mb-4">C#</h3></li>
-                            <li><h3 className="text-2xl font-semibold mb-4">Java</h3></li>
-                            <li><h3 className="text-2xl font-semibold mb-4">Python</h3></li>
-                            <li><h3 className="text-2xl font-semibold mb-4">Node.js</h3></li>
-                            <li><h3 className="text-2xl font-semibold mb-4">Express</h3></li>
-                            <li><h3 className="text-2xl font-semibold mb-4">MongoDB</h3></li>
-
+                            <li>
+                                {techStackBackend.map((tech, index) => (
+                                    <div key={index} className="mt-4">
+                                        <h3 className="text-2xl font-semibold mt-2">{tech.name}</h3>
+                                        <p className="text-md">{tech.experience} of experience</p>
+                                    </div>
+                                ))}
+                            </li>
                         </ul>
                     </div>
+
                 </div>
             </div>
-
         </section>
     );
 }

@@ -24,11 +24,6 @@ const AboutSection: React.FC = () => {
                     </p>
                 </article>
             </div>
-            
-          
-            
-            
-
         </section>
     );
 }
