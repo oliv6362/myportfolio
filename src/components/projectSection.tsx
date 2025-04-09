@@ -12,7 +12,7 @@ interface ProjectSectionProps {
 */
 const ProjectSection: React.FC<ProjectSectionProps> = ({title}) => {
     return (
-        <section id="projects" className="bg-[#011533]">
+        <section id="projects" className="bg-[#051937]">
             <div className="flex mx-auto h-screen items-center justify-center">
                 <div className="text-center">
                     <h1>{title}</h1>

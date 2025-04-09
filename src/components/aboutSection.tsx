@@ -2,7 +2,6 @@ import React from 'react';
 import image1 from '../assets/images/placeholder.png';
 import EducationPart from './parts/educationPart';
 import ExperiencePart from './parts/experiencePart';
-import StackPart from './parts/stackPart';
 
 
 const AboutSection: React.FC = () => {
@@ -25,10 +24,10 @@ const AboutSection: React.FC = () => {
                     </p>
                 </article>
             </div>
-
-            <EducationPart />
-            <ExperiencePart />
-            <StackPart />
+            
+          
+            
+            
 
         </section>
     );
