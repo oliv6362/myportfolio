@@ -4,7 +4,7 @@ import AboutSection from '../components/aboutSection';
 import ProjectsSection from '../components/projectSection';
 import ContactSection from '../components/contactSection';
 import HomeSection from '../components/homeSection';
-import TechStackSection from '../components/techStackSection';
+import TechStackSection from '../components/skillsSection';
 
 const HomePage: React.FC = () => {
   return (
