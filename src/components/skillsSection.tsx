@@ -50,7 +50,7 @@ const SkillsSection: React.FC = () => {
     ];
 
     return (
-        <section id="about" className="bg-[#011533]">
+        <section id="skillsSection" className="bg-[#011533]">
             <div className="max-w-7xl mx-auto px-4 py-20">
                 <h1 className="text-4xl font-bold text-center mb-8">Skills</h1>
                 <div className="grid grid-cols-4 md:grid-cols-4 gap-8">
