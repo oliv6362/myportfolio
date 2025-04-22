@@ -25,9 +25,9 @@ const AboutSection: React.FC = () => {
                 </article>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] max-w-7xl mx-auto px-4 py-20">
+            <div className="grid grid-cols-1 md:grid-cols-2 max-w-7xl mx-auto px-4 py-20">
                     <EducationPart/>
-                    <div className="hidden md:block border-l-2 border-gray-700 h-96"></div>
+                    {/*<div className="hidden md:block border-l-2 border-gray-700 h-96"></div>*/}
                     <ExperiencePart/>      
             </div>
         </section>
