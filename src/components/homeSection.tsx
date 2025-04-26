@@ -22,7 +22,7 @@ const HomeSection: React.FC = () => {
                         <h1 className="text-green-700 text-4xl font-bold ">I'm a
                             <Typewriter texts={titles} delay={50} infinite/>
                         </h1>
-                        <p className="text-lg mt-4">AP Graduate in Computer Science from Denmark. 
+                        <p className="text-lg mt-4">Take a look around — check out my projects, skills, and feel free to reach out if you want to connect! 
                         </p>
                     </div>
 
