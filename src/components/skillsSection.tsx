@@ -56,7 +56,7 @@ const SkillsSection: React.FC = () => {
                 <div className="grid grid-cols-4 md:grid-cols-4 gap-8">
 
                     {/* Frontend Column */}
-                    <div className="bg-slate-950 p-6 rounded-lg shadow text-center hover:bg-slate-900 hover:scale-105 transition-transform duration-300 border-2 border-sky-950">
+                    <div className="bg-gray-950 p-6 rounded-lg shadow text-center hover:bg-slate-950 hover:scale-105 transition-transform duration-300 border-2 border-sky-950">
                         <h2 className="text-3xl font-semibold mb-4">Frontend</h2>
                         <hr className="h-px border-t-0 bg-gradient-to-r opacity-25 dark:via-neutral-400" />
                         <ul className="space-y-2">
@@ -72,7 +72,7 @@ const SkillsSection: React.FC = () => {
                     </div>
 
                     {/* Backend Column */}
-                    <div className="bg-slate-950 p-6 rounded-lg shadow text-center hover:bg-slate-900 hover:scale-105 transition-transform duration-300 border-2 border-sky-950">
+                    <div className="bg-gray-950 p-6 rounded-lg shadow text-center hover:bg-slate-950 hover:scale-105 transition-transform duration-300 border-2 border-sky-950">
                         <h2 className="text-3xl font-semibold mb-4">Backend</h2>
                         <hr className="h-px border-t-0 bg-gradient-to-r opacity-25 dark:via-neutral-400" />
                         <ul className="space-y-2">
@@ -88,7 +88,7 @@ const SkillsSection: React.FC = () => {
                     </div>
 
                     {/* Database Column */}
-                    <div className="bg-slate-950 p-6 rounded-lg shadow text-center hover:bg-slate-900 hover:scale-105 transition-transform duration-300 border-2 border-sky-950">
+                    <div className="bg-gray-950 p-6 rounded-lg shadow text-center hover:bg-slate-950 hover:scale-105 transition-transform duration-300 border-2 border-sky-950">
                         <h2 className="text-3xl font-semibold mb-4">Database</h2>
                         <hr className="h-px border-t-0 bg-gradient-to-r opacity-25 dark:via-neutral-400" />
                         <ul className="space-y-2">
@@ -104,7 +104,7 @@ const SkillsSection: React.FC = () => {
                     </div>
 
                     {/* Tools Column */}
-                    <div className="bg-slate-950 p-6 rounded-lg shadow text-center hover:bg-slate-900 hover:scale-105 transition-transform duration-300 border-2 border-sky-950">
+                    <div className="bg-gray-950 p-6 rounded-lg shadow text-center hover:bg-slate-950 hover:scale-105 transition-transform duration-300 border-2 border-sky-950">
                         <h2 className="text-3xl font-semibold mb-4">Tools</h2>
                         <hr className="h-px border-t-0 bg-gradient-to-r opacity-25 dark:via-neutral-400" />
                         <ul className="space-y-2">
