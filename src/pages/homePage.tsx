@@ -12,7 +12,7 @@ const HomePage: React.FC = () => {
         <HomeSection/>
         <AboutSection/>
         <TechStackSection/>
-        <ProjectsSection title="projectTest" />
+        <ProjectsSection/>
         <ContactSection title="contactTest" />
       </main>
   );
