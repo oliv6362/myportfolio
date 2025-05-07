@@ -1,5 +1,5 @@
-import React from "react";
-import {FaLinkedin, FaGithubSquare} from "react-icons/fa";
+import { FaLinkedin, FaGithubSquare } from "react-icons/fa";
+import { TbFileCv } from "react-icons/tb"
 
 const Social: React.FC = () => {
     return (
@@ -16,7 +16,15 @@ const Social: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white-800 hover:scale-110 flex items-center space-x-2 text-4xl">
-                <FaGithubSquare  />
+                <FaGithubSquare />
+            </a>
+            <a
+                href="resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white-800 hover:scale-110 flex items-center space-x-2 text-4xl">
+                <TbFileCv />
+                
             </a>
         </div>
     );
