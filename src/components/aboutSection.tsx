@@ -31,7 +31,7 @@ const AboutSection: React.FC = () => {
                             server configuration, security, automation, and more.
                         </p>
                         <p className="text-lg mt-4">
-                            I'm passionate about creating, learning, and improving every day. I'm excited
+                            I am passionate about creating, learning, and improving every day. I'm excited
                             to keep growing as a developer and to see where the next project or idea will
                             take me.
                         </p>
