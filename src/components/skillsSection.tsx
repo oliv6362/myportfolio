@@ -42,18 +42,6 @@ const skillTools: Skill[] = [
     { name: "Visual Studio Code", experience: "x years" },
 ];
 
-const skillSystemDevelopment: Skill[] = [
-    { name: "Scrum", experience: "x years" },
-    { name: "Extreme Programming (XP)", experience: "x years" },
-    { name: "SOLID", experience: "x years" },
-    { name: "UML", experience: "x years" },
-    { name: "Database normalization", experience: "x years" },
-    { name: "Object-oriented analysis & design (OOA/OOD)", experience: "x years" },
-    { name: "Clean Code Architecture", experience: "x years" },
-    { name: "Microservices Architecture", experience: "x years" },
-    { name: "Event-Driven Architecture", experience: "x years" },
-];
-
 const SkillSection: React.FC = () => {
     return (
         <section id="skillsSection" className="bg-[#011533]">
@@ -124,24 +112,6 @@ const SkillSection: React.FC = () => {
                             </li>
                         </ul>
                     </div>
-
-
-                    {/* System development Column 
-                    <div className="bg-sky-700 p-6 rounded-lg shadow text-center hover:bg-sky-800 hover:scale-105 transition-transform duration-300">
-                        <h2 className="text-3xl font-semibold mb-4">System Development</h2>
-                        <ul className="space-y-2">
-                            <li>
-                                {skillsSystemDevelopment.map((tech, index) => (
-                                    <div key={index} className="mt-4">
-                                        <h3 className="text-2xl font-semibold mt-2">{tech.name}</h3>
-                                        <p className="text-md">{tech.experience} of experience</p>
-                                    </div>
-                                ))}
-                            </li>
-                        </ul>
-                    </div>
-                    */}
-
                 </div>
             </div>
         </section>
