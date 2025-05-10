@@ -1,5 +1,6 @@
 import imageplc from '../assets/images/placeholder.png';
-import SBFrontPage from '../assets/images/placeholder.png';
+import SBThumbnail from '../assets/images/projects/SBThumbnail.png';
+import LCThumbnail from '../assets/images/projects/LCThumbnail.png';
 import { FaGithub } from "react-icons/fa"
 
 interface Project {
@@ -13,12 +14,12 @@ interface Project {
 
 const projects: Project[] = [
     {
-        title: 'Car Details',
-        tags: ["javascript", "html", "css", "express", "sequelize", "orm", "sqlite", "sql", "pug", "templating engine", "scrum", "xp", "uml diagrams", "rest", "restul api's", "Full-stack", "frontend", "backend", "database"],
-        description: 'Project primarily focused on the practical application of agile methodologies, including Scrum and Extreme Programming.\n\nKey features include the ability to look up car details by license plate, create and login as a user, and favorite specific cars for future references.',
-        imageUrl: SBFrontPage,
-        footer: '2023',
-        link: 'https://github.com/superDatamatikere/superBiler'
+        title: 'My portfoilio',
+        tags: ["typescript", "react", "vite", "tailwind", "html", "css"],
+        description: 'This is my portfolio project, showcasing who I am, my skills, and the projects I’ve worked on. It also serves as the foundation for this website.',
+        imageUrl: imageplc,
+        footer: '2025',
+        link: 'https://github.com/oliv6362/myportfolio'
     },
     {
         title: 'Mini-Framework for 2D Games',
@@ -29,45 +30,44 @@ const projects: Project[] = [
         link: 'https://github.com/oliv6362/MiniFramework2DGame'
     },
     {
-        title: 'Logistics Company',
-        tags: ["java", "html", "css", "mysql", "sql", "spring boot", "thymeleaf", "ooa/ood", "scrum", "uml diagrams", "clean code architecture", "design patterns", "Full-Stack", "Frontend", "Backend", "Database"],
-        description: 'Project that focuses on registering packages that arrive from drivers to storage facilities.',
-        imageUrl: imageplc,
-        footer: '2023',
-        link: 'https://github.com/oliv6362/LogistikfirmaEksamenFinal'
-    },
-    {
-        title: 'My portfoilio',
-        tags: ["typescript", "react", "vite", "tailwind", "html", "css"],
-        description: 'This is my portfolio project, showcasing who I am, my skills, and the projects I’ve worked on. It also serves as the foundation for this website.',
-        imageUrl: imageplc,
-        footer: '2025',
-        link: 'https://github.com/oliv6362/myportfolio'
-    },
-    {
         title: 'Movie & TV Series Catalog/Explorer',
         tags: ["javascript", "react", "redux", "redux toolkit & query", "html", "css"],
-        description: 'It is a single-page application that uses TheMovieDb API. Here you can see popular, highest-rated, upcoming & favorited movies, or search for movies. There is also TV-Series! You can view Trailers from movies or TV-Series, and favorite Movies.',
+        description: 'Single-page application that uses TheMovieDb API. You can see popular, highest-rated, upcoming & favorited movies, or search for movies or TV Series. You can also view trailers.',
         imageUrl: imageplc,
         footer: '2024',
         link: 'https://github.com/oliv6362/ReactRTKPractice'
+    },
+    {
+        title: 'Car Details',
+        tags: ["javascript", "html", "css", "express", "sequelize", "orm", "sqlite", "sql", "pug", "templating engine", "scrum", "xp", "uml diagrams", "rest", "restul api's", "Full-stack", "frontend", "backend", "database"],
+        description: 'Project where you can look up car details by license plate, create and login as a user, and favorite specific cars for future references.',
+        imageUrl: SBThumbnail,
+        footer: '2023',
+        link: 'https://github.com/superDatamatikere/superBiler'
+    },
+    {
+        title: 'Logistics Company',
+        tags: ["java", "html", "css", "mysql", "sql", "spring boot", "thymeleaf", "ooa/ood", "scrum", "uml diagrams", "clean code architecture", "design patterns", "Full-Stack", "Frontend", "Backend", "Database"],
+        description: 'Project that where you can register packages that arrive from drivers to storage facilities.',
+        imageUrl: LCThumbnail,
+        footer: '2023',
+        link: 'https://github.com/oliv6362/LogistikfirmaEksamenFinal'
     },
 ]
 
 const ProjectSection: React.FC = () => {
     return (
-        <section id="projects" className="bg-[#051937]">
-            <div className="py-20 px-4">
-                <h2 className="text-3xl font-bold text-center pl-5">Projects</h2>
+        <section id="projects" className="bg-[#051937] py-20 px-4">
+                <h2 className="text-3xl font-bold text-center pl-5 mb-8">Projects</h2>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-5">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center mx-90">
                     {projects.map((project) => (
                         <div
                             key={project.title} className="bg-gray-950 border-2 border-sky-950 rounded-lg p-4 text-start hover:scale-105 transition-transform duration-300
-                            flex flex-col h-full">
+                            flex flex-col h-full max-w-md">
 
                             {/* thumbnail */}
-                            <img src={project.imageUrl} alt={project.title} className="w-full h-auto mt-2 rounded-lg" />
+                            <img src={project.imageUrl} alt={project.title} className="w-full h-auto rounded-md" />
 
                             {/* main content */}
                             <h3 className="text-2xl font-bold my-2">{project.title}</h3>
@@ -78,7 +78,7 @@ const ProjectSection: React.FC = () => {
                                     </span>
                                 ))}
                             </div>
-                            <p className="text-lg text-gray-400 mt-2 whitespace-pre-line ">{project.description}</p>
+                            <p className="text-md text-gray-400 mt-2 whitespace-pre-line ">{project.description}</p>
 
                             {/* footer */}
                             <div className="mt-auto flex justify-between items-center pt-4">
@@ -94,7 +94,6 @@ const ProjectSection: React.FC = () => {
                     ))}
                 </div>
 
-            </div>
         </section>
     );
 };
