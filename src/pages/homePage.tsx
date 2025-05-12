@@ -1,10 +1,10 @@
 // src/pages/HomePage.tsx
 import React from 'react';
-import AboutSection from '../components/aboutSection';
-import ProjectsSection from '../components/projectSection';
-import ContactSection from '../components/contactSection';
-import HomeSection from '../components/homeSection';
-import TechStackSection from '../components/skillsSection';
+import AboutSection from '../components/sections/aboutSection';
+import ProjectSection from '../components/sections/projectSection';
+import ContactSection from '../components/sections/contactSection';
+import HomeSection from '../components/sections/homeSection';
+import TechStackSection from '../components/sections/skillsSection';
 
 const HomePage: React.FC = () => {
   return (
@@ -12,7 +12,7 @@ const HomePage: React.FC = () => {
         <HomeSection/>
         <AboutSection/>
         <TechStackSection/>
-        <ProjectsSection/>
+        <ProjectSection/>
         <ContactSection title="contactTest" />
       </main>
   );

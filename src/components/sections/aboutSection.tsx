@@ -1,7 +1,7 @@
 import React from 'react';
-import image1 from '../assets/images/placeholder.png';
-import EducationPart from './parts/educationPart';
-import ExperiencePart from './parts/experiencePart';
+import image1 from '../../assets/images/placeholder.png';
+import EducationPart from '../parts/educationPart';
+import ExperiencePart from '../parts/experiencePart';
 
 
 const AboutSection: React.FC = () => {
