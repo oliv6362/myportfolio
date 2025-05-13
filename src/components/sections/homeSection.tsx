@@ -2,6 +2,7 @@ import React from 'react';
 import image1 from '../../assets/images/placeholder.png';
 import Typewriter from '../typewriter';
 import Social from '../social';
+import Wave from 'react-wavify';
 
 const HomeSection: React.FC = () => {
     const titles = [
@@ -20,9 +21,9 @@ const HomeSection: React.FC = () => {
                     <div>
                         <h1 className="text-4xl font-bold ">Hello! I'm Oliver Nordby Hansen</h1>
                         <h1 className="text-green-700 text-4xl font-bold ">I'm a
-                            <Typewriter texts={titles} delay={50} infinite/>
+                            <Typewriter texts={titles} delay={50} infinite />
                         </h1>
-                        <p className="text-lg mt-4">Take a look around — check out my projects, skills, and feel free to reach out if you want to connect! 
+                        <p className="text-lg mt-4">Take a look around — check out my projects, skills, and feel free to reach out if you want to connect!
                         </p>
                     </div>
 
@@ -36,8 +37,18 @@ const HomeSection: React.FC = () => {
                 <div className="flex justify-center h-98 w-96 object-contain">
                     <img src={image1} alt="placeholder" />
                 </div>
-
             </div>
+
+            <Wave fill='#051937'
+                paused={true}
+                style={{ display: 'flex' }}
+                options={{
+                    height: 50,
+                    amplitude: 50,
+                    speed: 0.15,
+                    points: 3
+                }}
+            />
         </section>
     );
 };

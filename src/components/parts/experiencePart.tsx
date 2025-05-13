@@ -17,7 +17,7 @@ const ExperiencePart: React.FC = () => {
 
     return (
         <section className="mt-4 px-10">
-            <h2 className="text-3xl font-bold text-start pl-5">Experience</h2>
+            <h2 className="text-4xl text-start pl-5">Experience</h2>
 
             <div className="relative border-s border-gray-300 ">
                 {experience.map((exp, index) => (

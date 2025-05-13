@@ -2,6 +2,7 @@ import React from 'react';
 import image1 from '../../assets/images/placeholder.png';
 import EducationPart from '../parts/educationPart';
 import ExperiencePart from '../parts/experiencePart';
+import Wave from 'react-wavify';
 
 
 const AboutSection: React.FC = () => {
@@ -14,7 +15,7 @@ const AboutSection: React.FC = () => {
                     </div>
 
                     <article className="max-w-2xl">
-                        <h1 className="text-4xl font-bold">About me</h1>
+                        <h1 className="text-5xl">About me</h1>
                         <p className="text-lg mt-4">
                             Hey, I'm Oliver! I'm from Denmark and recently completed my Computer Science
                             degree.
@@ -44,6 +45,17 @@ const AboutSection: React.FC = () => {
                     <ExperiencePart />
                 </div>
             </div>
+
+            <Wave fill='#011533'
+                paused={true}
+                style={{ display: 'flex' }}
+                options={{
+                    height: 50,
+                    amplitude: 50,
+                    speed: 0.15,
+                    points: 3
+                }}
+            />
         </section>
     );
 }

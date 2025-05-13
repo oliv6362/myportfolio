@@ -21,6 +21,9 @@ code {
     monospace;
 }
 
+.wave-top {
+  clip-path: path("M0,60 C300,120 900,0 1200,60 L1200,0 L0,0 Z");
+}
 
 @keyframes blink {
   0% { opacity: 1; }

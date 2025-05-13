@@ -1,3 +1,4 @@
+import Wave from 'react-wavify';
 
 
 interface Skill {
@@ -45,8 +46,9 @@ const skillTools: Skill[] = [
 const SkillSection: React.FC = () => {
     return (
         <section id="skillsSection" className="bg-[#011533]">
-            <div className="max-w-7xl mx-auto px-4 py-20">
-                <h1 className="text-4xl font-bold text-center mb-8">Skills</h1>
+
+            <div className="max-w-7xl mx-auto px-4 pb-10">
+                <h1 className="text-5xl text-center mb-15">Skills</h1>
                 <div className="grid grid-cols-4 md:grid-cols-4 gap-8">
 
                     {/* Frontend Column */}
@@ -114,6 +116,17 @@ const SkillSection: React.FC = () => {
                     </div>
                 </div>
             </div>
+
+            <Wave fill='#051937'
+                paused={true}
+                style={{ display: 'flex' }}
+                options={{
+                    height: 50,
+                    amplitude: 50,
+                    speed: 0.15,
+                    points: 3
+                }}
+            />
         </section>
     );
 }
