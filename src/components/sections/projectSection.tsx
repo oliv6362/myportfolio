@@ -63,17 +63,10 @@ const ProjectSection: React.FC = () => {
 
     return (
         <section id="projects" className="relative bg-[#051937]">
-
             <div className="flex flex-col items-center mb-15 space-y-2">
-               
-
                 {/* Header text */}
                 <h2 className="text-5xl text-center ">Projects</h2>
-
-             
             </div>
-
-
 
             <Pager
                 page={page}

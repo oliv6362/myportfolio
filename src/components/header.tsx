@@ -9,6 +9,7 @@ const Header: React.FC = () => {
                     <ul className="flex space-x-4 text-lg ">
                         <li><a href="#home" className="text-white hover:bg-green-700 rounded-lg p-2 transition-colors duration-350">Home</a></li>
                         <li><a href="#about" className="text-white hover:bg-green-700 rounded-lg p-2 transition-colors duration-350">About</a></li>
+                        <li><a href="#skillSection" className="text-white hover:bg-green-700 rounded-lg p-2 transition-colors duration-350">Skills</a></li>
                         <li><a href="#projects" className="text-white hover:bg-green-700 rounded-lg p-2 transition-colors duration-350">Projects</a></li>
                         <li><a href="#contact" className="text-white hover:bg-green-700 rounded-lg p-2 transition-colors duration-350">Contact</a></li>
                     </ul>
