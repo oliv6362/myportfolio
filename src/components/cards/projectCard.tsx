@@ -14,7 +14,6 @@ interface ProjectCardProps {
 /**
  * ProjectCard component that renders a project in a card format.
  *
- * @component
  * @param {ProjectCardProps} props
  * @param {Project} props.project – The project data to render:
  *   - `title`: the display name  

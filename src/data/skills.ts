@@ -55,16 +55,16 @@ export const skillTools: Skill[] = [
 ];
 
 export const skillSystemDevelopment: Skill[] = [
-    { name: "Agile Methodologies", icon: 'logos:agile' },
-    { name: "Scrum", icon: 'logos:scrum' },
-    { name: "Extreme Programming(XP)", icon: 'logos:extreme-programming' },
-    { name: "SOLID", icon: 'logos:solid' },
-    { name: "UML", icon: 'logos:uml-diagram' },
-    { name: "Database normalization", icon: 'logos:database-normalization' },
-    { name: "Object-oriented analysis & design (OOA/OOD)", icon: 'logos:object-oriented-design' },
-    { name: "Clean Code Architecture", icon: 'logos:clean-code' },
-    { name: "Design Patterns", icon: 'logos:design-patterns' },
-    { name: "Test-Driven Development (TDD)", icon: 'logos:test-driven-development' },
+    { name: "Agile Methodologies", icon: '' },
+    { name: "Scrum", icon: '' },
+    { name: "Extreme Programming(XP)", icon: '' },
+    { name: "SOLID", icon: '' },
+    { name: "UML", icon: '' },
+    { name: "Database normalization", icon: '' },
+    { name: "Object-oriented analysis & design (OOA/OOD)", icon: '' },
+    { name: "Clean Code Architecture", icon: '' },
+    { name: "Design Patterns", icon: '' },
+    { name: "Test-Driven Development (TDD)", icon: '' },
 ];
 
 export const skillPlatformsAndEnvironments: Skill[] = [

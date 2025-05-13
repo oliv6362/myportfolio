@@ -17,7 +17,6 @@ interface PagerProps {
  * 1. **Previous** and **Next** arrows (disabled at the bounds).  
  * 2. **Dot indicators**—one per page—highlighting the current page and clickable to navigate.
  *
- * @component
  * @param {PagerProps} props - The properties for the Pager component.
  * 
  * @returns {JSX.Element}

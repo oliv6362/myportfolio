@@ -1,0 +1,14 @@
+{
+    "entryPoints": [
+        "src/components"
+    ],
+    "entryPointStrategy": "expand",
+    "out": "docs",
+    "exclude": [
+        "**/*.test.tsx",
+        "**/*.spec.ts"
+    ],
+    "includeVersion": true,
+    "hideGenerator": true,
+    "theme": "default"
+}

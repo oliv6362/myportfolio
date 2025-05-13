@@ -25,8 +25,6 @@ const variants = {
  * 4. Animates the transition between pages using `framer-motion`:
  *     - Slide in/out based on navigation direction
  *     - Fades opacity for a smooth effect
- *
- * @component
  * 
  * @returns {JSX.Element | null}
  *   A `<section>` containing project cards and pagination controls, or `null` if no projects exist.
