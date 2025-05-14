@@ -24,9 +24,8 @@ interface SkillCardProps {
  * ```
  */
 export const SkillCard: React.FC<SkillCardProps> = ({ skill }) => (
-    <div className="flex items-center space-x-2 border-2 rounded-lg border-sky-950
-                      bg-gray-900 px-2.5 py-2.5">
+    <div className="flex items-center space-x-2 border-2 rounded-lg border-sky-950 bg-gray-900 px-2.5 py-2.5">
         <Icon icon={skill.icon} className="w-8 h-8" aria-hidden="true" />
-        <span className="text-2xl font-medium">{skill.name}</span>
+        <span className="text-2xl">{skill.name}</span>
     </div>
 );

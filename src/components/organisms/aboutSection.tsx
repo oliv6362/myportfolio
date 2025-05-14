@@ -63,18 +63,12 @@ const AboutSection: React.FC = () => {
 
                 {/* Image + Intro Text */}
                 <div className="flex mx-auto justify-center ">
-                    <motion.div
-                        className="flex mx-auto justify-center"
-                        {...fadeProps}
-                    >
+                    <motion.div className="flex mx-auto justify-center" {...fadeProps}>
                         <div className="flex justify-center h-98 w-96 object-contain mr-20">
                             <img className='rounded-lg' src={image1} alt="placeholder" />
                         </div>
 
-                        <motion.article
-                            className="max-w-2xl"
-                            {...staggerProps}
-                        >
+                        <motion.article className="max-w-2xl" {...staggerProps} >
                             <h1 className="text-5xl">About me</h1>
                             {aboutParagraphs.map((paragraph) =>
                                 <motion.p key={paragraph.text} className="text-lg mt-4" {...itemProps}>
@@ -86,10 +80,7 @@ const AboutSection: React.FC = () => {
                 </div>
 
                 {/* Education & Experience Timeline */}
-                <motion.div
-                    className="grid grid-cols-1 md:grid-cols-2 max-w-7xl mx-auto pt-20"
-                    {...fadeProps}
-                >
+                <motion.div className="grid grid-cols-1 md:grid-cols-2 max-w-7xl mx-auto pt-20" {...fadeProps} >
                     <EducationPart />
                     {/*<div className="hidden md:block border-l-2 border-gray-700 h-96"></div>*/}
                     <ExperiencePart />

@@ -39,7 +39,7 @@ const HomeSection: React.FC = () => {
                 duration: 2,
                 ease: 'easeInOut',
                 repeatDelay: 3,
-                
+
             },
         };
 
@@ -48,26 +48,16 @@ const HomeSection: React.FC = () => {
         : { variants: containerVariants, initial: 'hidden', animate: 'visible' };
 
     const itemProps = reduce ? {} : { variants: fadeItem };
-    
+
     return (
-        <motion.section
-            id="home"
-            className="bg-[#011533] overflow-hidden"
-            {...containerProps}
-        >
+        <motion.section id="home" className="bg-[#011533] overflow-hidden" {...containerProps} >
             <div className="flex h-screen items-center justify-center">
                 <div className="max-w-2xl mr-20">
-                    <motion.h1
-                        className="text-4xl font-bold"
-                        variants={slideLeft}
-                    >
+                    <motion.h1 className="text-4xl font-bold" variants={slideLeft}>
                         Hello! I'm Oliver Nordby Hansen
                     </motion.h1>
 
-                    <motion.h1
-                        className="mt-2 text-green-700 text-4xl font-bold"
-                        variants={slideRight}
-                    >
+                    <motion.h1 className="mt-2 text-green-700 text-4xl font-bold" variants={slideRight}>
                         I'm a{' '}
                         <Typewriter texts={titles} delay={50} infinite />
                     </motion.h1>
@@ -81,24 +71,15 @@ const HomeSection: React.FC = () => {
                         <Social />
                     </motion.div>
 
-                    <motion.a
-                        href="#contact"
+                    <motion.a href="#contact"
                         className="mt-4 inline-block rounded-lg bg-green-700 px-12 py-3 text-lg transition-colors focus:shadow-outline hover:bg-green-900"
-                        {...itemProps}
-                        {...buttonHover}
-                        aria-label="Scroll to contact section"
-                        rel="noopener noreferrer"
-                    >
+                        {...itemProps} {...buttonHover} aria-label="Scroll to contact section" rel="noopener noreferrer">
                         Let's Connect
                     </motion.a>
                 </div>
 
                 <motion.div className="w-96" {...itemProps}>
-                    <img
-                        src={image1}
-                        alt="Oliver’s portrait"
-                        className="rounded-lg w-full h-auto"
-                    />
+                    <img src={image1} alt="Oliver’s portrait" className="rounded-lg w-full h-auto" />
                 </motion.div>
             </div>
 
@@ -106,8 +87,7 @@ const HomeSection: React.FC = () => {
                 className="overflow-hidden"
                 {...(reduce
                     ? {}
-                    : { initial: { opacity: 0 }, animate: { opacity: 1 }, transition: { delay: 1, duration: 1 } })}
-            >
+                    : { initial: { opacity: 0 }, animate: { opacity: 1 }, transition: { delay: 1, duration: 1 } })} >
                 <Wave
                     fill="#051937"
                     paused

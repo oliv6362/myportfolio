@@ -1,5 +1,4 @@
 const EducationPart: React.FC = () => {
-
     const education = [
         {
             year: "2022 - 2025",

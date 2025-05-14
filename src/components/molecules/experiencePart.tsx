@@ -1,5 +1,4 @@
 const ExperiencePart: React.FC = () => {
-
     const experience = [
         {
             year: "2024 - 2024",

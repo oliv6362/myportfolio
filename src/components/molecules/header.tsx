@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Header: React.FC = () => {
     return (
         <header className="fixed top-+ left-0 w-full z-50">

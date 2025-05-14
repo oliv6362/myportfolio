@@ -61,16 +61,12 @@ const ProjectSection: React.FC = () => {
     return (
         <section id="projects" className="relative bg-[#051937] scroll-mt-25">
             <div className="flex flex-col items-center mb-15 space-y-2">
+                
                 {/* Header text */}
                 <h2 className="text-5xl text-center ">Projects</h2>
             </div>
 
-            <Pager
-                page={page}
-                total={total}
-                onPrev={handlePrev}
-                onNext={handleNext}
-            />
+            <Pager page={page} total={total} onPrev={handlePrev} onNext={handleNext}/>
 
             <AnimatePresence initial={false} custom={direction} mode="wait">
                 {/* 2) absolute inset-0 + same grid classes */}
