@@ -5,7 +5,6 @@ import { motion } from 'motion/react';
 /**
  * ProjectCard component props.
  *
- * @interface ProjectCardProps
  */
 interface ProjectCardProps {
   project: Project;
@@ -36,7 +35,6 @@ interface ProjectCardProps {
  * }
  * ```
  */
-
 export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   const scrollVariants = {
     hidden: { opacity: 0, y: 0 },

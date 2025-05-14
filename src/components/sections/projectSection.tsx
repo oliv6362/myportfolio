@@ -34,7 +34,6 @@ const variants = {
  * <ProjectSection />
  * ```
 */
-
 const ProjectSection: React.FC = () => {
     const [page, setPage] = useState(0);
     const [direction, setDirection] = useState(0);
