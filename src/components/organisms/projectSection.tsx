@@ -78,7 +78,7 @@ const ProjectSection: React.FC = () => {
                     animate="center"
                     exit="exit"
                     transition={{ duration: 0.5 }}
-                    className="grid grid-cols-1 lg:grid-cols-3 sm:gap-12 lg:gap-8 place-items-center lg:mx-30"
+                    className="grid grid-cols-1 lg:grid-cols-3 sm:gap-12 lg:gap-8 place-items-center container mx-auto"
                 >
                     {currentProjects.map((project) => (
                         <ProjectCard key={project.link} project={project} />
