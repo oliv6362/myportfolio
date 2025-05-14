@@ -59,7 +59,7 @@ const ProjectSection: React.FC = () => {
     const handleNext = () => paginate(Math.min(page + 1, total - 1));
 
     return (
-        <section id="projects" className="relative bg-[#051937]">
+        <section id="projects" className="relative bg-[#051937] scroll-mt-25">
             <div className="flex flex-col items-center mb-15 space-y-2">
                 {/* Header text */}
                 <h2 className="text-5xl text-center ">Projects</h2>

@@ -28,7 +28,7 @@ import {
  */
 const SkillSection: React.FC = () => {
     return (
-        <section id="skillSection" className="bg-[#011533]">
+        <section id="skillSection" className="bg-[#011533] scroll-mt-25">
             <div className="max-w-7xl mx-auto pb-10">
                 <h1 className="text-5xl text-center mb-15">Skills</h1>
 
