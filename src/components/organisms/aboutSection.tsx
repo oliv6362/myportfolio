@@ -1,6 +1,6 @@
 import image1 from '../../assets/images/placeholder.png';
-import EducationPart from '../parts/educationPart';
-import ExperiencePart from '../parts/experiencePart';
+import EducationPart from '../molecules/educationPart';
+import ExperiencePart from '../molecules/experiencePart';
 import { aboutParagraphs } from '../../data/abouts';
 import Wave from 'react-wavify';
 import { motion, useReducedMotion } from 'framer-motion';
@@ -19,7 +19,7 @@ function useScrollProps(variants: any, amount = 0.3) {
     const reduce = useReducedMotion();
     return reduce
         ? {}
-        : { variants, initial: 'hidden', whileInView: 'visible', viewport: { once: false, amount } };
+        : { variants, initial: 'hidden', whileInView: 'visible', viewport: { once: true, amount } };
 }
 
 function useItemProps(variants: any) {

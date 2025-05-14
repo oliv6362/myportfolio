@@ -1,4 +1,4 @@
-import { SkillCategory } from '../cards/skillCategory';
+import { SkillCategory } from '../molecules/skillCategory';
 import Wave from 'react-wavify';
 import {
     skillFrontend,

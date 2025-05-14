@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import { ProjectCard } from '../cards/projectCard';
+import { ProjectCard } from '../molecules/projectCard';
 import { projects } from '../../data/projects';
-import { Pager } from '../pager';
+import { Pager } from '../atoms/pager';
 import { motion, AnimatePresence } from 'framer-motion';
 import Wave from 'react-wavify';
 

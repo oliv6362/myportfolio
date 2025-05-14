@@ -1,7 +1,7 @@
 import React from 'react';
 import image1 from '../../assets/images/placeholder.png';
-import Typewriter from '../typewriter';
-import Social from '../social';
+import Typewriter from '../atoms/typewriter';
+import Social from '../atoms/social';
 import Wave from 'react-wavify';
 
 const HomeSection: React.FC = () => {

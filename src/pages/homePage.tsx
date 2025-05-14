@@ -1,10 +1,10 @@
 // src/pages/HomePage.tsx
 import React from 'react';
-import AboutSection from '../components/sections/aboutSection';
-import ProjectSection from '../components/sections/projectSection';
-import ContactSection from '../components/sections/contactSection';
-import HomeSection from '../components/sections/homeSection';
-import TechStackSection from '../components/sections/skillSection';
+import AboutSection from '../components/organisms/aboutSection';
+import ProjectSection from '../components/organisms/projectSection';
+import ContactSection from '../components/organisms/contactSection';
+import HomeSection from '../components/organisms/homeSection';
+import TechStackSection from '../components/organisms/skillSection';
 
 const HomePage: React.FC = () => {
   return (

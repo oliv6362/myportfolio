@@ -1,7 +1,7 @@
 
 import { Routes, Route } from 'react-router-dom';
 import HomePage from './pages/homePage';
-import Header from './components/header';
+import Header from './components/molecules/header';
 
 function App() {
   return (
