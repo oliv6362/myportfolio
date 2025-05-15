@@ -1,4 +1,4 @@
-import image1 from '../../assets/images/placeholder.png';
+import image1 from '../../assets/images/pic6.png';
 import EducationPart from '../molecules/educationPart';
 import ExperiencePart from '../molecules/experiencePart';
 import { aboutParagraphs } from '../../data/abouts';
@@ -64,7 +64,7 @@ const AboutSection: React.FC = () => {
                 {/* Image + Intro Text */}
                 <div className="flex mx-auto justify-center ">
                     <motion.div className="flex mx-auto justify-center" {...fadeProps}>
-                        <div className="flex justify-center h-98 w-96 object-contain mr-20">
+                        <div className="flex justify-center h-98 w-96 object-contain mr-20 mt-6">
                             <img className='rounded-lg' src={image1} alt="placeholder" />
                         </div>
 

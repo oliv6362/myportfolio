@@ -1,9 +1,8 @@
-import React from 'react';
 import { motion, useReducedMotion } from 'framer-motion';
-import image1 from '../../assets/images/placeholder.png';
 import Typewriter from '../atoms/typewriter';
 import Social from '../atoms/social';
 import Wave from 'react-wavify';
+import { AsciiLoader } from '../atoms/asciiLoader';
 
 const containerVariants = { hidden: { opacity: 0 }, visible: { opacity: 1, transition: { when: 'beforeChildren', staggerChildren: 0.2 } } };
 const slideLeft = { hidden: { opacity: 0, x: -50 }, visible: { opacity: 1, x: 0, transition: { duration: 0.6, ease: 'easeOut' } } };
@@ -78,11 +77,12 @@ const HomeSection: React.FC = () => {
                     </motion.a>
                 </div>
 
-                <motion.div className="w-96" {...itemProps}>
-                    <img src={image1} alt="Oliver’s portrait" className="rounded-lg w-full h-auto" />
+                <motion.div className="text-[5px]/0.75 " {...itemProps}>
+                    <AsciiLoader />
                 </motion.div>
             </div>
 
+            {/* Wave divider */}
             <motion.div
                 className="overflow-hidden"
                 {...(reduce
