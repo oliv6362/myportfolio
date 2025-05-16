@@ -59,28 +59,28 @@ const AboutSection: React.FC = () => {
 
     return (
         <section id="about" className="bg-[#051937] scroll-mt-25">
-            <div className="py-20 px-4">
+            <div className="py-20 md:px-4">
 
                 {/* Image + Intro Text */}
-                <div className="flex mx-auto justify-center ">
-                    <motion.div className="flex mx-auto justify-center" {...fadeProps}>
-                        <div className="flex justify-center h-98 w-96 object-contain mr-20 mt-6">
-                            <img className='rounded-lg' src={image1} alt="placeholder" />
-                        </div>
 
-                        <motion.article className="max-w-2xl" {...staggerProps} >
-                            <h1 className="text-5xl">About me</h1>
-                            {aboutParagraphs.map((paragraph) =>
-                                <motion.p key={paragraph.text} className="text-lg mt-4" {...itemProps}>
-                                    {paragraph.text}
-                                </motion.p>
-                            )}
-                        </motion.article>
-                    </motion.div>
-                </div>
+                <motion.div className="flex flex-col xl:flex-row mx-auto justify-center" {...fadeProps}>
+                    <div className="flex justify-center mx-auto xl:mx-0 h-49 w-48 md:h-65 md:w-64 lg:h-98 lg:w-96 object-contain xl:mr-20 xl:mt-6">
+                        <img className='rounded-lg' src={image1} alt="placeholder" />
+                    </div>
+
+                    <motion.article className="max-w-2xl mx-auto xl:mx-0" {...staggerProps} >
+                        <h1 className="text-center xl:text-start text-2xl md:text-3xl lg:text-4xl xl:text-5xl mt-4 xl:mt-0">About me</h1>
+                        {aboutParagraphs.map((paragraph) =>
+                            <motion.p key={paragraph.text} className="text-center xl:text-start text-sm md:text-md lg:text-lg mt-4 px-8 lg:px-0" {...itemProps}>
+                                {paragraph.text}
+                            </motion.p>
+                        )}
+                    </motion.article>
+                </motion.div>
+
 
                 {/* Education & Experience Timeline */}
-                <motion.div className="grid grid-cols-1 md:grid-cols-2 max-w-7xl mx-auto pt-20" {...fadeProps} >
+                <motion.div className="grid grid-cols-1 xl:grid-cols-2 max-w-7xl mx-auto" {...fadeProps} >
                     <EducationPart />
                     {/*<div className="hidden md:block border-l-2 border-gray-700 h-96"></div>*/}
                     <ExperiencePart />
