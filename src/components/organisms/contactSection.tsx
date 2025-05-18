@@ -29,17 +29,17 @@ const ContactSection: React.FC = () => {
     };
 
   // If submission succeeded, show a thank-you message
-  if (state.succeeded) {
+    if (state.succeeded) {
     return (
       <section id="contact" className="bg-[#011533] pb-40 px-4 scroll-mt-16">
         <motion.div className="max-w-lg mx-auto text-center space-y-4" {...(reduce ? {} : { initial: { opacity: 0 }, animate: { opacity: 1 }, transition: { duration: 0.5 } })}>
 
-          <motion.h2 className="text-5xl font-bold"
+          <motion.h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold"
             {...(reduce ? {} : { initial: { scale: 0.8 }, animate: { scale: 1 }, transition: { duration: 0.5 } })} >
             Thank you!
           </motion.h2>
 
-          <motion.p className="text-2xl text-gray-300"
+          <motion.p className="text-base md:text-lg lg:text-xl xl:text-2xl text-gray-300"
             {...(reduce ? {} : { initial: { opacity: 0 }, animate: { opacity: 1 }, transition: { delay: 0.3, duration: 0.5 } })}>
             Your message has been sent.
           </motion.p>
@@ -48,20 +48,18 @@ const ContactSection: React.FC = () => {
       </section>
     );
   }
-
   // Otherwise, render the contact form
+
   return (
-    <section id="contact" className="bg-[#011533] pb-40 px-4 scroll-mt-16 ">
+    <section id="contact" className="bg-[#011533] pb-40 px-14 xl:px-0 scroll-mt-16 ">
       <motion.div className="max-w-lg mx-auto" {...containerProps}>
 
-        <motion.h2 className="text-5xl text-center mb-8" variants={itemVariants}>
-          Contact Me
-        </motion.h2>
+        <motion.h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-center mb-8" variants={itemVariants}>Contact Me</motion.h2>
 
         <motion.form onSubmit={handleSubmit} className="space-y-6">
           {/* Name */}
           <motion.div variants={itemVariants}>
-            <label htmlFor="name" className="block text-xl mb-1">Name</label>
+            <label htmlFor="name" className="block text-base lg:text-lg xl:text-2xl mb-1">Name</label>
             <input id="name" type="text" name="name" required
               className="w-full rounded-lg border border-gray-700 bg-gray-900 p-3 focus:outline-none focus:ring-2 focus:ring-green-500" />
             <ValidationError prefix="Name" field="name" errors={state.errors} />
@@ -69,7 +67,7 @@ const ContactSection: React.FC = () => {
 
           {/* Email */}
           <motion.div variants={itemVariants}>
-            <label htmlFor="email" className="block text-xl mb-1">Email</label>
+            <label htmlFor="email" className="block text-base lg:text-lg xl:text-2xl mb-1">Email</label>
             <input id="email" type="email" name="email" required
               className="w-full rounded-lg border border-gray-700 bg-gray-900 p-3 focus:outline-none focus:ring-2 focus:ring-green-500" />
             <ValidationError prefix="Email" field="email" errors={state.errors} />
@@ -77,7 +75,7 @@ const ContactSection: React.FC = () => {
 
           {/* Message */}
           <motion.div variants={itemVariants}>
-            <label htmlFor="message" className="block text-xl mb-1">Message</label>
+            <label htmlFor="message" className="block text-base lg:text-lg xl:text-2xl mb-1">Message</label>
             <textarea id="message" name="message" rows={6} required
               className="w-full rounded-lg border border-gray-700 bg-gray-900 p-3 focus:outline-none focus:ring-2 focus:ring-green-500" />
             <ValidationError prefix="Message" field="message" errors={state.errors} />
@@ -85,7 +83,7 @@ const ContactSection: React.FC = () => {
 
           {/* Submit */}
           <motion.button type="submit" disabled={state.submitting}
-            className="w-full rounded-lg bg-green-700 px-6 py-3 text-lg font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
+            className="w-full rounded-lg bg-green-700 px-6 py-3 text-sm lg:text-base xl:text-lg font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
             variants={itemVariants}
             whileHover={buttonVariants.hover}
             whileTap={buttonVariants.tap}
@@ -99,5 +97,6 @@ const ContactSection: React.FC = () => {
     </section>
   );
 };
+
 
 export default ContactSection;
