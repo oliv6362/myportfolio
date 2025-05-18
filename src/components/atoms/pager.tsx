@@ -3,7 +3,6 @@ import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 /**
  * Pager component props.
  *
- * @interface PagerProps
  */
 interface PagerProps {
     page: number;
@@ -16,23 +15,7 @@ interface PagerProps {
  * Pager Component that renders a pagination control with:
  * 1. **Previous** and **Next** arrows (disabled at the bounds).  
  * 2. **Dot indicators**—one per page—highlighting the current page and clickable to navigate.
- *
- * @param {PagerProps} props - The properties for the Pager component.
- * 
- * @returns {JSX.Element}
- *  A '<nav>' element containing the pagination controls.
- * 
- * @example
- * ```tsx
- * <Pager
- *   page={currentPage}
- *   total={numPages}
- *   onPrev={() => setPage(currentPage - 1)}
- *   onNext={() => setPage(currentPage + 1)}
- * />
- * ```
  */
-
 export const Pager: React.FC<PagerProps> = ({ page, total, onPrev, onNext }) => {
     return (
         <nav className="my-6 flex items-center justify-center gap-4">

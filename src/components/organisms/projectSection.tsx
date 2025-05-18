@@ -25,15 +25,7 @@ const variants = {
  * 4. Animates the transition between pages using `framer-motion`:
  *     - Slide in/out based on navigation direction
  *     - Fades opacity for a smooth effect
- * 
- * @returns {JSX.Element | null}
- *   A `<section>` containing project cards and pagination controls, or `null` if no projects exist.
- * 
- * @example
- * ```tsx
- * <ProjectSection />
- * ```
-*/
+ */
 const ProjectSection: React.FC = () => {
     const [page, setPage] = useState(0);
     const [direction, setDirection] = useState(0);

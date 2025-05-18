@@ -2,8 +2,6 @@ import React, { useState, useEffect } from 'react';
 
 /**
  * Typewriter component props.
- * 
- * @interface TypewriterProps
  */
 interface TypewriterProps {
   texts: string[];
@@ -15,11 +13,6 @@ interface TypewriterProps {
  * Typewriter component that creates a typewriter effect for a list of strings.
  * It types out each string, pauses, deletes it, and then moves to the next string.
  * The process can be repeated infinitely if specified.
- *
- * @param {TypewriterProps} props - The properties for the Typewriter component.
- * @returns {JSX.Element} The rendered Typewriter component.
- * @example
- * <Typewriter texts={['Developer', 'Designer']} delay={100} infinite/>
  */
 const Typewriter: React.FC<TypewriterProps> = ({texts, delay = 100, infinite = false}) => {
   // Index of the current text in the array.

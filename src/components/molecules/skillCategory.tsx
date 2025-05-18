@@ -22,22 +22,6 @@ const fadeUp = {
 /**
  * SkillCategory component that wraps a set of skills under a common heading, with optional
  * fade-up animation on scroll
- *
- * @param {SkillCategoryProps} props
- * @param {string} props.title – Category heading text.
- * @param {Skill[]} props.skills – Array of skill objects to render.
- * @param {boolean} [props.fullWidth=false]
- * @returns {JSX.Element}
- *
- * 
- * @example
- * ```tsx
- * <SkillCategory
- *   title="Backend"
- *   skills={[{ name: 'Node.js', icon: 'logos:nodejs-icon' }]}
- *   fullHeight={false}
- * />
- * ```
  */
 export const SkillCategory: React.FC<SkillCategoryProps> = ({ title, skills, fullHeight = false }) => {
     const shouldReduceMotion = useReducedMotion();

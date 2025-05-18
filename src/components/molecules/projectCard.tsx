@@ -12,28 +12,6 @@ interface ProjectCardProps {
 
 /**
  * ProjectCard component that renders a project in a card format.
- *
- * @param {ProjectCardProps} props
- * @param {Project} props.project – The project data to render:
- *   - `title`: the display name  
- *   - `tags`: an array of tag strings  
- *   - `description`: a text description 
- *   - `thumbnail`: image URL or import  
- *   - `footer`: a footer label (e.g. year)  
- *   - `link`: external URL (opens in new tab)  
- * 
- * @returns {JSX.Element}
- *   A styled `<article>` element representing one project card.
- *
- * @example
- * ```tsx
- * import { ProjectCard } from './ProjectCard';
- * import { myProject } from '../data/projects';
- *
- * function App() {
- *   return <ProjectCard project={myProject} />;
- * }
- * ```
  */
 export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   const scrollVariants = {

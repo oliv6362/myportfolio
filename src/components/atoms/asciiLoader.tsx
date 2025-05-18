@@ -6,23 +6,6 @@ import { AsciiAnimation } from './asciiAnimation';
  * 1. Fetches a plain‐text ASCII animation from `/ascii.txt`, and splits the text on one or more blank lines.  
  * 5. Displays a “Loading animation…” placeholder until the frames are available.  
  * 6. Logs any fetch or parsing errors to the console.
- *
- * @returns {JSX.Element}  
- *   - While loading: a centered “Loading animation…” message  
- *   - Once loaded: a `<div>` wrapping `<AsciiAnimation>` with the parsed frames  
- *
- * @example
- * ```tsx
- * import { AsciiLoader } from './AsciiLoader';
- *
- * function App() {
- *   return (
- *     <main>
- *       <AsciiLoader />
- *     </main>
- *   );
- * }
- * ```
  */
 export const AsciiLoader: React.FC = () => {
   const [frames, setFrames] = useState<string[]>([]);

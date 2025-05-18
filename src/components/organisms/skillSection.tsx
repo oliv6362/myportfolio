@@ -17,14 +17,6 @@ import {
  *  
  * Each `SkillCategory` animates into view on scroll.  
  * A decorative SVG wave divider caps the bottom.
- *
- * @returns {JSX.Element}
- *
- * @example
- * ```tsx
- * import SkillSection from './SkillSection';
- * <SkillSection />
- * ```
  */
 const SkillSection: React.FC = () => {
     return (

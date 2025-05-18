@@ -36,21 +36,6 @@ function useItemProps(variants: any) {
  * 3. A decorative, static SVG wave at the bottom
  *
  * Animations respect the user’s `prefers-reduced-motion` setting.
- *
- * @returns {JSX.Element} 
- * The About section with image, text, and timeline parts.
- * 
- * @example
- * ```tsx
- * import AboutSection from './AboutSection';
- * function App() {
- *   return (
- *     <main>
- *       <AboutSection />
- *     </main>
- *   );
- * }
- * ```
  */
 const AboutSection: React.FC = () => {
     const fadeProps = useScrollProps(fadeInUp);

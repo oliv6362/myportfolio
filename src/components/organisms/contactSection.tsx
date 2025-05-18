@@ -14,19 +14,6 @@ const buttonVariants = { hover: { scale: 1.05 }, tap: { scale: 0.95 } };
 * - Otherwise shows Name, Email, and Message fields, each fading in on scroll.
 * - The submit button animates on hover/tap.
 * - Honors the user’s `prefers-reduced-motion` setting by disabling animations.
-*
-* @component
-* @returns {JSX.Element}
-*   The contact section containing either a success message or the interactive form.
-*
-* @example
-* ```tsx
-* import ContactSection from './ContactSection';
-*
-* function App() {
-*   return <ContactSection />;
-* }
-* ```
 */
 const ContactSection: React.FC = () => {
   const [state, handleSubmit] = useForm("xyzwlepp");

@@ -39,8 +39,6 @@ const Header: React.FC = () => {
                 </ul>
             </div>
 
-
-
             {/*Line */}
             <hr className="h-px border-t-0 bg-gradient-to-r opacity-25 dark:via-neutral-400" />
         </header>
