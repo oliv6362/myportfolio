@@ -45,7 +45,6 @@ export const skillDatabase: Skill[] = [
 export const skillTools: Skill[] = [
     { name: "Git", icon: 'skill-icons:git' },
     { name: "GitHub", icon: 'skill-icons:github-dark' },
-    { name: "Figma", icon: 'skill-icons:figma-dark"' },
     { name: "Visual Code", icon: 'skill-icons:vscode-dark' },
     { name: "Visual Studio", icon: 'skill-icons:visualstudio-dark' },
     { name: "Intellij", icon: 'devicon:intellij' },

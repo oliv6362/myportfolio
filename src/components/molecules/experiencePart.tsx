@@ -24,10 +24,10 @@ const ExperiencePart: React.FC = () => {
                         <div className="absolute w-4 h-4 bg-green-700 rounded-full -ml-7"></div>
 
                         <div className="mt-4 bg-gray-950 p-4 rounded-lg text-start border-2 border-sky-950">
-                            <p className="text-xs lg:text-sm text-green-700">{exp.year}</p>
-                            <p className="text-md lg:text-lg xl:text-xl font-bold">{exp.company}</p>
-                            <p className="text-sm lg:text-md xl:text-lg text-gray-400">{exp.position}</p>
-                            <p className="text-xs lg:text-sm xl:text-md text-gray-400">{exp.location}</p>
+                            <p className="text-sm lg:text-base text-green-700">{exp.year}</p>
+                            <p className="text-lg lg:text-xl font-bold">{exp.company}</p>
+                            <p className="text-base lg:text-lg text-gray-400">{exp.position}</p>
+                            <p className="text-sm lg:text-base text-gray-400">{exp.location}</p>
                         </div>
                     </div>
                 ))}

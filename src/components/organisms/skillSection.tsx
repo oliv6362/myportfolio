@@ -29,23 +29,19 @@ import {
 const SkillSection: React.FC = () => {
     return (
         <section id="skillSection" className="bg-[#011533] scroll-mt-25">
-            <div className="max-w-7xl mx-auto pb-10">
+            <div className="max-w-7xl mx-auto pb-10 px-14 xl:px-0">
                 <h1 className="text-5xl text-center mb-15">Skills</h1>
 
-                <div className="grid grid-cols-3 grid-rows-[150px,1fr,150px] gap-8">
-                    <SkillCategory title="Tools" skills={skillTools} fullWidth />
+                <div className="grid grid-cols-1 xl:grid-cols-3 grid-rows-[150px,1fr,150px] gap-12 xl:gap-8">
+                    <SkillCategory title="Tools" skills={skillTools} />
 
-                    <SkillCategory title="Frontend" skills={skillFrontend} />
-                    <SkillCategory title="Backend" skills={skillBackend} />
-                    <SkillCategory title="Database" skills={skillDatabase} />
+                    <SkillCategory title="Frontend" skills={skillFrontend} fullHeight />
+                    <SkillCategory title="Backend" skills={skillBackend} fullHeight />
+                    <SkillCategory title="Database" skills={skillDatabase} fullHeight />
 
-                    <SkillCategory
-                        title="Platforms & Environments"
-                        skills={skillPlatformsAndEnvironments}
-                        fullWidth
-                    />
+                    <SkillCategory title="Platforms & Environments" skills={skillPlatformsAndEnvironments} />
 
-                    <SkillCategory title="System Development" skills={skillSystemDevelopment} fullWidth />
+                    <SkillCategory title="System Development" skills={skillSystemDevelopment} />
                 </div>
             </div>
 

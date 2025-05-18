@@ -50,11 +50,11 @@ const HomeSection: React.FC = () => {
 
     return (
         <motion.section id="home" className="bg-[#011533] overflow-hidden" {...containerProps} >
-            <div className="flex flex-col lg:flex-row lg:h-screen xl:h-screen items-center justify-center px-20 pt-40 lg:pt-0 xl:pt-0">
+            <div className="flex flex-col lg:flex-row lg:h-screen xl:h-screen items-center justify-center px-20 pt-30 lg:pt-0 xl:pt-0">
 
                 {/* Left side */}
                 <div className="max-w-2xl lg:mr-15 xl:mr-20 text-center lg:text-left xl:text-left">
-                    <motion.h1 className="text-lg md:text-xl lg:text-2xl xl:text-4xl font-bold" variants={slideLeft}>
+                    <motion.h1 className="text-lg md:text-xl lg:text-2xl xl:text-4xl" variants={slideLeft}>
                         Hello! I'm Oliver Nordby Hansen
                     </motion.h1>
 
@@ -63,7 +63,7 @@ const HomeSection: React.FC = () => {
                         <Typewriter texts={titles} delay={50} infinite />
                     </motion.h1>
 
-                    <motion.p className="mt-2 text-lg md:text-xl lg:text-md xl:text-lg" {...itemProps}>
+                    <motion.p className="mt-2 text-base md:text-lg lg:text-xl" {...itemProps}>
                         Take a look around — check out my projects, skills, and feel free to
                         reach out if you want to connect!
                     </motion.p>
@@ -73,14 +73,14 @@ const HomeSection: React.FC = () => {
                     </motion.div>
 
                     <motion.a href="#contact"
-                        className="mt-4 inline-block rounded-lg bg-green-700 px-12 py-3 text-xs md:text-sm lg:text-md xl:text-lg transition-colors focus:shadow-outline hover:bg-green-900"
+                        className="mt-4 inline-block rounded-lg bg-green-700 px-12 py-3 text-sm lg:text-base xl:text-lg transition-colors focus:shadow-outline hover:bg-green-900"
                         {...itemProps} {...buttonHover} aria-label="Scroll to contact section" rel="noopener noreferrer">
                         Let's Connect
                     </motion.a>
                 </div>
 
                 {/* Right side */}
-                <motion.div className=" text-[2.5px]/0.5 lg:text-[3px]/0.5 xl:text-[5px]/0.75 mt-10 lg:mt-0 lg:mg-0"{...itemProps}>
+                <motion.div className="text-[3px]/0.5 xl:text-[5px]/0.75 mt-10 lg:mt-0 lg:mg-0"{...itemProps}>
                     <AsciiLoader />
                 </motion.div>
             </div>

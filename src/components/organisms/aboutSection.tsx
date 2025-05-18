@@ -59,7 +59,7 @@ const AboutSection: React.FC = () => {
 
     return (
         <section id="about" className="bg-[#051937] scroll-mt-25">
-            <div className="py-20 md:px-4">
+            <div className="py-10 md:px-4">
 
                 {/* Image + Intro Text */}
 
@@ -71,7 +71,7 @@ const AboutSection: React.FC = () => {
                     <motion.article className="max-w-2xl mx-auto xl:mx-0" {...staggerProps} >
                         <h1 className="text-center xl:text-start text-2xl md:text-3xl lg:text-4xl xl:text-5xl mt-4 xl:mt-0">About me</h1>
                         {aboutParagraphs.map((paragraph) =>
-                            <motion.p key={paragraph.text} className="text-center xl:text-start text-sm md:text-md lg:text-lg mt-4 px-8 lg:px-0" {...itemProps}>
+                            <motion.p key={paragraph.text} className="text-center xl:text-start text-base lg:text-lg mt-4 px-8 lg:px-0" {...itemProps}>
                                 {paragraph.text}
                             </motion.p>
                         )}
