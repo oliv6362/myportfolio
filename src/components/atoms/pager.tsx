@@ -35,7 +35,7 @@ interface PagerProps {
 
 export const Pager: React.FC<PagerProps> = ({ page, total, onPrev, onNext }) => {
     return (
-        <nav className="mb-6 flex items-center justify-center gap-4">
+        <nav className="my-6 flex items-center justify-center gap-4">
             <button
                 onClick={onPrev}
                 disabled={page === 0}

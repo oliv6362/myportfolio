@@ -47,34 +47,27 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
       initial="hidden"
       whileInView="visible"
       transition={{ duration: 0.75, ease: 'easeOut' }}
-      variants={scrollVariants}
-    >
-      <img
-        src={project.thumbnail}
-        alt={`${project.title} thumbnail`}
-        loading="lazy"
-        className="w-full rounded-t-lg"
-        role="img"
-      />
+      variants={scrollVariants} >
 
+      {/* Thumbnail image */}
+      <img src={project.thumbnail} alt={`${project.title} thumbnail`} loading="lazy" className="w-full rounded-t-lg" role="img" />
+
+      {/* Project title, tags, description */}
       <div className="px-4 pb-2">
-        <h3 className="my-2 text-2xl font-bold">{project.title}</h3>
+        <h3 className="my-2 text-lg md:text-xl lg:text-2xl ">{project.title}</h3>
 
         <ul className="mb-2 flex flex-wrap gap-2">
           {project.tags.map((tag) => (
-            <li
-              key={tag}
-              className="rounded-sm border border-green-500 bg-gray-900 px-2 py-0.5
-                       text-xs font-medium uppercase text-green-500"
-            >
+            <li key={tag} className="rounded-sm border border-green-500 bg-gray-900 px-2 py-0.5 text-xs uppercase text-green-500">
               {tag}
             </li>
           ))}
         </ul>
 
-        <p className="whitespace-pre-line text-md text-gray-400">{project.description}</p>
+        <p className="whitespace-pre-line text-base lg:text-lg text-gray-400">{project.description}</p>
       </div>
 
+      {/* Footer with GitHub link */}
       <footer className="mt-auto flex items-center justify-between px-4 pb-2">
         <span className="font-bold text-gray-400">{project.footer}</span>
         <motion.a
@@ -84,12 +77,10 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           aria-label={`View ${project.title} on GitHub`}
           className="inline-block p-2 text-4xl text-white"
           whileHover={{ scale: 1.25 }}
-          whileTap={{ scale: 0.9 }}
-        >
+          whileTap={{ scale: 0.9 }} >
           <FaGithub />
         </motion.a>
       </footer>
-
     </motion.article>
   );
 };

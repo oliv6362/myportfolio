@@ -58,7 +58,7 @@ const AboutSection: React.FC = () => {
     const itemProps = useItemProps(fadeItem);
 
     return (
-        <section id="about" className="bg-[#051937] scroll-mt-25">
+        <section id="about" className="bg-[#051937] scroll-mt-16">
             <div className="py-10 md:px-4">
 
                 {/* Image + Intro Text */}

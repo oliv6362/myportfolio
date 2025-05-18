@@ -59,17 +59,14 @@ const ProjectSection: React.FC = () => {
     const handleNext = () => paginate(Math.min(page + 1, total - 1));
 
     return (
-        <section id="projects" className="relative bg-[#051937] scroll-mt-25">
-            <div className="flex flex-col items-center mb-15 space-y-2">
-                
-                {/* Header text */}
-                <h2 className="text-5xl text-center ">Projects</h2>
-            </div>
+        <section id="projects" className="relative bg-[#051937] scroll-mt-16">
+            {/* Header text */}
+            <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-center ">Projects</h2>
 
-            <Pager page={page} total={total} onPrev={handlePrev} onNext={handleNext}/>
+            <Pager page={page} total={total} onPrev={handlePrev} onNext={handleNext} />
 
+            {/* Project cards */}
             <AnimatePresence initial={false} custom={direction} mode="wait">
-                {/* 2) absolute inset-0 + same grid classes */}
                 <motion.div
                     key={page}
                     custom={direction}
@@ -78,14 +75,14 @@ const ProjectSection: React.FC = () => {
                     animate="center"
                     exit="exit"
                     transition={{ duration: 0.5 }}
-                    className="grid grid-cols-1 lg:grid-cols-3 sm:gap-12 lg:gap-8 place-items-center container mx-auto"
-                >
+                    className="grid grid-cols-1 xl:grid-cols-3 gap-12 xl:gap-8 place-items-center container mx-auto px-14 md:px-0">
                     {currentProjects.map((project) => (
                         <ProjectCard key={project.link} project={project} />
                     ))}
                 </motion.div>
             </AnimatePresence>
 
+            {/* Waver divider */}
             <Wave fill='#011533'
                 paused={true}
                 style={{ display: 'flex' }}

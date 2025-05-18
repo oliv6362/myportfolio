@@ -59,7 +59,7 @@ export const SkillCategory: React.FC<SkillCategoryProps> = ({ title, skills, ful
                   text-center hover:bg-slate-950 hover:scale-102 transition-transform
                   duration-300 border-2 border-sky-950 col-span-3`} {...motionProps}>
 
-            <h2 className="text-3xl font-semibold mb-4">{title}</h2>
+            <h2 className="text-xl md:text-2xl lg:text-3xl mb-4">{title}</h2>
             <hr className="h-px border-t-0 bg-gradient-to-r opacity-25 dark:via-neutral-400" />
 
             <ul className="flex flex-wrap justify-center gap-2 mt-4">
