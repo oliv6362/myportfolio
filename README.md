@@ -7,5 +7,5 @@
 - Tailwind
   
 # How to run
-1. npm install2
+1. npm install
 2. npm run dev
