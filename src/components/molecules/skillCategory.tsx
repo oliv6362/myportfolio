@@ -39,8 +39,8 @@ export const SkillCategory: React.FC<SkillCategoryProps> = ({ title, skills, ful
     const spanClasses = fullHeight ? 'xl:col-span-1' : '';
 
     return (
-        <motion.div className={`${spanClasses} bg-gray-950 p-5 rounded-lg
-                  text-center hover:bg-slate-950 hover:scale-102 transition-transform
+        <motion.div className={`${spanClasses} bg-stone-950 p-5 rounded-lg
+                  text-center hover:bg-slate-950 transition-transform
                   duration-300 border-2 border-sky-950 col-span-3`} {...motionProps}>
 
             <h2 className="text-xl md:text-2xl lg:text-3xl mb-4">{title}</h2>

@@ -23,7 +23,7 @@ const EducationPart: React.FC = () => {
                     <div key={index} className="pl-5">
                         <div className="absolute w-4 h-4 bg-green-700 rounded-full -ml-7"></div>
 
-                        <div className="mt-4 bg-gray-950 p-4 rounded-lg text-start border-2 border-sky-950">
+                        <div className="mt-4 bg-stone-950 p-4 rounded-lg text-start border-2 border-sky-950 hover:bg-slate-950">
                             <p className="text-sm lg:text-base text-green-700">{edu.year}</p>
                             <p className="text-lg lg:text-xl font-bold">{edu.institution}</p>
                             <p className="text-base lg:text-lg text-gray-400">{edu.description}</p>
