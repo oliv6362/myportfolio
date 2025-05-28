@@ -1,5 +1,5 @@
 import { useReducedMotion } from 'framer-motion';
-import { containerStaggerVariant, slideLeftVariant, slideRightVariant, fadeUpVariant, fadeItemVariant, staggerVariant } from './animations';
+import { containerStaggerVariant, slideLeftVariant, slideRightVariant, fadeUpVariant, fadeItemVariant, staggerVariant} from './animations';
 
 export function useMotionAnimations() {
     const reduce = useReducedMotion();
@@ -38,5 +38,14 @@ export function useSkillAnimations() {
     const reduce = useReducedMotion();
     return {
         fadeUp: reduce ? {} : { variants: fadeUpVariant, initial: 'hidden', whileInView: 'visible', viewport: { once: true, amount: 0.2 } } 
+    }
+}
+
+export function useContactAnimations() {
+    const reduce = useReducedMotion();
+    return {
+        containerStagger: reduce ? {} : { variants: containerStaggerVariant, initial: 'hidden', whileInView: 'visible', viewport: { once: true, amount: 0.3 } }, 
+        fadeUp: reduce ? {} : { variants: fadeUpVariant }, 
+        button: reduce ? {} : { whileHover: { scale: 1.05 }, whileTap: { scale: 0.95 } } ,
     }
 }

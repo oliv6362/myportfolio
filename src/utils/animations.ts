@@ -1,5 +1,9 @@
 import type { Variants } from 'framer-motion';
 
+/**
+ *  Variants for animations for this portfolio website.
+ */
+
 //Global animations
 export const containerStaggerVariant: Variants = {
     hidden: { opacity: 0 }, visible: { opacity: 1, transition: { when: 'beforeChildren', staggerChildren: 0.2 } }
@@ -10,8 +14,6 @@ export const fadeUpVariant: Variants = {
 };
 
 
-
-
 //HomeSection animations
 export const slideLeftVariant: Variants = {
     hidden: { opacity: 0, x: -50 }, visible: { opacity: 1, x: 0, transition: { duration: 0.6, ease: 'easeOut' } }
@@ -20,8 +22,6 @@ export const slideLeftVariant: Variants = {
 export const slideRightVariant: Variants = {
     hidden: { opacity: 0, x: 50 }, visible: { opacity: 1, x: 0, transition: { duration: 0.6, ease: 'easeOut' } }
 };
-
-
 
 
 // AboutSection animations

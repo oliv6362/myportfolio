@@ -1,13 +1,6 @@
 import { SkillCategory } from '../molecules/skillCategory';
 import Wave from 'react-wavify';
-import {
-    skillFrontend,
-    skillBackend,
-    skillDatabase,
-    skillTools,
-    skillSystemDevelopment,
-    skillPlatformsAndEnvironments,
-} from '../../data/skills';
+import { skillFrontend, skillBackend, skillDatabase, skillTools, skillSystemDevelopment, skillPlatformsAndEnvironments } from '../../data/skills';
 
 /**
  * SkillSection component that organizes all skill categories into a “bento” grid:

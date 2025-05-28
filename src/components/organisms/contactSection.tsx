@@ -1,12 +1,6 @@
-import { motion, useReducedMotion } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { useForm, ValidationError } from '@formspree/react';
-
-/**
- * Variants for the form container:
- */
-const containerVariants = { hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { when: 'beforeChildren', staggerChildren: 0.2, duration: 0.5 } } };
-const itemVariants = { hidden: { opacity: 0, y: 10 }, visible: { opacity: 1, y: 0, transition: { duration: 0.4 } } };
-const buttonVariants = { hover: { scale: 1.05 }, tap: { scale: 0.95 } };
+import { useContactAnimations } from '../../utils/animationManager';
 
 /**
 * ContactSection component that renders a contact form powered by Formspree and animated with Framer Motion.
@@ -17,48 +11,37 @@ const buttonVariants = { hover: { scale: 1.05 }, tap: { scale: 0.95 } };
 */
 const ContactSection: React.FC = () => {
   const [state, handleSubmit] = useForm("xyzwlepp");
-  const reduce = useReducedMotion();
-
-  const containerProps = reduce
-    ? {}
-    : {
-      variants: containerVariants,
-      initial: 'hidden',
-      whileInView: 'visible',
-      viewport: { once: true, amount: 0.3 }
-    };
+  const { containerStagger, fadeUp, button } = useContactAnimations();
 
   // If submission succeeded, show a thank-you message
-    if (state.succeeded) {
+  if (state.succeeded) {
     return (
       <section id="contact" className="bg-[#011533] pb-40 px-4 scroll-mt-16">
-        <motion.div className="max-w-lg mx-auto text-center space-y-4" {...(reduce ? {} : { initial: { opacity: 0 }, animate: { opacity: 1 }, transition: { duration: 0.5 } })}>
+        <div className="max-w-lg mx-auto text-center space-y-4">
 
-          <motion.h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold"
-            {...(reduce ? {} : { initial: { scale: 0.8 }, animate: { scale: 1 }, transition: { duration: 0.5 } })} >
+          <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold">
             Thank you!
-          </motion.h2>
+          </h2>
 
-          <motion.p className="text-base md:text-lg lg:text-xl xl:text-2xl text-gray-300"
-            {...(reduce ? {} : { initial: { opacity: 0 }, animate: { opacity: 1 }, transition: { delay: 0.3, duration: 0.5 } })}>
+          <p className="text-base md:text-lg lg:text-xl xl:text-2xl text-gray-300">
             Your message has been sent.
-          </motion.p>
+          </p>
 
-        </motion.div>
+        </div>
       </section>
     );
   }
-  // Otherwise, render the contact form
 
+  // Otherwise, render the contact form
   return (
     <section id="contact" className="bg-[#011533] pb-40 px-14 xl:px-0 scroll-mt-16 ">
-      <motion.div className="max-w-lg mx-auto" {...containerProps}>
+      <motion.div className="max-w-lg mx-auto" {...containerStagger}>
 
-        <motion.h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-center mb-8" variants={itemVariants}>Contact Me</motion.h2>
+        <motion.h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-center mb-8" {...fadeUp}>Contact Me</motion.h2>
 
         <motion.form onSubmit={handleSubmit} className="space-y-6">
           {/* Name */}
-          <motion.div variants={itemVariants}>
+          <motion.div {...fadeUp}>
             <label htmlFor="name" className="block text-base lg:text-lg xl:text-2xl mb-1">Name</label>
             <input id="name" type="text" name="name" required
               className="w-full rounded-lg border border-gray-700 bg-gray-900 p-3 focus:outline-none focus:ring-2 focus:ring-green-500" />
@@ -66,7 +49,7 @@ const ContactSection: React.FC = () => {
           </motion.div>
 
           {/* Email */}
-          <motion.div variants={itemVariants}>
+          <motion.div {...fadeUp}>
             <label htmlFor="email" className="block text-base lg:text-lg xl:text-2xl mb-1">Email</label>
             <input id="email" type="email" name="email" required
               className="w-full rounded-lg border border-gray-700 bg-gray-900 p-3 focus:outline-none focus:ring-2 focus:ring-green-500" />
@@ -74,7 +57,7 @@ const ContactSection: React.FC = () => {
           </motion.div>
 
           {/* Message */}
-          <motion.div variants={itemVariants}>
+          <motion.div {...fadeUp}>
             <label htmlFor="message" className="block text-base lg:text-lg xl:text-2xl mb-1">Message</label>
             <textarea id="message" name="message" rows={6} required
               className="w-full rounded-lg border border-gray-700 bg-gray-900 p-3 focus:outline-none focus:ring-2 focus:ring-green-500" />
@@ -84,11 +67,8 @@ const ContactSection: React.FC = () => {
           {/* Submit */}
           <motion.button type="submit" disabled={state.submitting}
             className="w-full rounded-lg bg-green-700 px-6 py-3 text-sm lg:text-base xl:text-lg font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
-            variants={itemVariants}
-            whileHover={buttonVariants.hover}
-            whileTap={buttonVariants.tap}
-            animate={reduce ? {} : undefined}
-            {...buttonVariants} >
+            {...fadeUp}
+            {...button} >
             {state.submitting ? "Sending…" : "Send Message"}
           </motion.button>
         </motion.form>
@@ -97,6 +77,5 @@ const ContactSection: React.FC = () => {
     </section>
   );
 };
-
 
 export default ContactSection;
