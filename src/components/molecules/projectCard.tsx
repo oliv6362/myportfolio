@@ -21,7 +21,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   return (
     <motion.article
       key={project.link}
-      className="flex max-w-md flex-col rounded-lg border-2 border-sky-950 bg-stone-950 hover:bg-slate-950 h-full"
+      className="flex max-w-md flex-col rounded-lg border-2 border-sky-950 bg-black hover:bg-slate-950 h-full"
       initial="hidden"
       whileInView="visible"
       transition={{ duration: 0.75, ease: 'easeOut' }}

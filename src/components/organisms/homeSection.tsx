@@ -3,7 +3,7 @@ import Typewriter from '../atoms/typewriter';
 import Social from '../atoms/social';
 import Wave from 'react-wavify';
 import { AsciiLoader } from '../atoms/asciiLoader';
-import { useMotionAnimations } from '../../utils/animationManager';
+import { useHomeAnimations } from '../../utils/animationManager';
 
 const titles = [
     ' Software Developer',
@@ -24,10 +24,11 @@ const titles = [
  * Respects `prefers-reduced-motion`.
  */
 const HomeSection: React.FC = () => {
-    const { container, slideLeft, slideRight, fadeItemUp, buttonHover } = useMotionAnimations();
+    const { containerStagger, slideLeft, slideRight, buttonHover, fadeUp } = useHomeAnimations();
+
 
     return (
-        <motion.section id="home" className="bg-[#011533] overflow-hidden" {...container} >
+        <motion.section id="home" className="bg-[#011533] overflow-hidden" {...containerStagger} >
             <div className="flex flex-col lg:flex-row lg:h-screen xl:h-screen items-center justify-center px-20 pt-30 lg:pt-0 xl:pt-0">
 
                 {/* Left side */}
@@ -41,24 +42,24 @@ const HomeSection: React.FC = () => {
                         <Typewriter texts={titles} delay={50} infinite />
                     </motion.h2>
 
-                    <motion.p className="mt-2 text-base md:text-lg lg:text-xl" {...fadeItemUp}>
+                    <motion.p className="mt-2 text-base md:text-lg lg:text-xl" {...fadeUp}>
                         Take a look around — check out my projects, skills, and feel free to
                         reach out if you want to connect!
                     </motion.p>
 
-                    <motion.div {...fadeItemUp}>
+                    <motion.div {...fadeUp}>
                         <Social />
                     </motion.div>
 
                     <motion.a href="#contact"
                         className="mt-4 inline-block rounded-lg bg-green-700 px-12 py-3 text-sm lg:text-base xl:text-lg transition-colors focus:shadow-outline hover:bg-green-900"
-                        {...fadeItemUp} {...buttonHover} aria-label="Scroll to contact section" rel="noopener noreferrer">
+                        {...fadeUp} {...buttonHover} aria-label="Scroll to contact section" rel="noopener noreferrer">
                         Let's Connect
                     </motion.a>
                 </div>
 
                 {/* Right side */}
-                <motion.div className="text-[3px]/0.5 xl:text-[5px]/0.75 mt-10 lg:mt-0 lg:mg-0"{...fadeItemUp}>
+                <motion.div className="text-[3px]/0.5 xl:text-[5px]/0.75 mt-10 lg:mt-0 lg:mg-0"{...fadeUp}>
                     <AsciiLoader />
                 </motion.div>
             </div>

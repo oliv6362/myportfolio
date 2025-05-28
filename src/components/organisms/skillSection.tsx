@@ -22,7 +22,7 @@ const SkillSection: React.FC = () => {
     return (
         <section id="skillSection" className="bg-[#011533] scroll-mt-16">
             <div className="max-w-7xl mx-auto pb-10 px-14 xl:px-0">
-                <h1 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-center mb-6 md:mb-10 lg:mb-15">Skills</h1>
+                <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-center mb-6 md:mb-10 lg:mb-15">Skills</h2>
 
                 <div className="grid grid-cols-1 xl:grid-cols-3 grid-rows-[150px,1fr,150px] gap-12 xl:gap-8">
                     <SkillCategory title="Tools" skills={skillTools} />

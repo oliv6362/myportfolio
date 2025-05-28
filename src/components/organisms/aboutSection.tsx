@@ -3,31 +3,8 @@ import EducationPart from '../molecules/educationPart';
 import ExperiencePart from '../molecules/experiencePart';
 import { aboutParagraphs } from '../../data/abouts';
 import Wave from 'react-wavify';
-import { motion, useReducedMotion } from 'framer-motion';
-
-/**
- *  Variants for animations in the "About me" section.
- *  - The `fadeInUp` fading in and sliding up a container.
- *  - The `stagger` stagger the appearance of child elements.
- *  - The `fadeItem` for fading in individual items (e.g. paragraphs)..
- */
-const fadeInUp = { hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } } };
-const stagger = { hidden: {}, visible: { transition: { staggerChildren: 0.3 } } };
-const fadeItem = { hidden: { opacity: 0 }, visible: { opacity: 1, transition: { duration: 0.5 } } };
-
-function useScrollProps(variants: any, amount = 0.3) {
-    const reduce = useReducedMotion();
-    return reduce
-        ? {}
-        : { variants, initial: 'hidden', whileInView: 'visible', viewport: { once: true, amount } };
-}
-
-function useItemProps(variants: any) {
-    const reduce = useReducedMotion();
-    return reduce
-        ? {}
-        : { variants };
-}
+import { motion } from 'framer-motion';
+import { useAboutAnimations } from '../../utils/animationManager';
 
 /**
  * AboutSection component that renders the “About me” section with:
@@ -38,34 +15,30 @@ function useItemProps(variants: any) {
  * Animations respect the user’s `prefers-reduced-motion` setting.
  */
 const AboutSection: React.FC = () => {
-    const fadeProps = useScrollProps(fadeInUp);
-    const staggerProps = useScrollProps(stagger);
-    const itemProps = useItemProps(fadeItem);
+    const { fadeItem, stagger, fadeUp } = useAboutAnimations();
 
     return (
-        <section id="about" className="bg-[#051937] scroll-mt-16">
+        <section id="about" className="bg-[#051937] scroll-mt-16" >
             <div className="py-10 md:px-4">
 
                 {/* Image + Intro Text */}
-
-                <motion.div className="flex flex-col xl:flex-row mx-auto justify-center" {...fadeProps}>
+                <motion.div className="flex flex-col xl:flex-row mx-auto justify-center" {...fadeUp}>
                     <div className="flex justify-center mx-auto xl:mx-0 h-49 w-48 md:h-65 md:w-64 lg:h-98 lg:w-96 object-contain xl:mr-20 xl:mt-6">
                         <img className='rounded-lg' src={image1} alt="placeholder" />
                     </div>
 
-                    <motion.article className="max-w-2xl mx-auto xl:mx-0" {...staggerProps} >
-                        <h1 className="text-center xl:text-start text-2xl md:text-3xl lg:text-4xl xl:text-5xl mt-4 xl:mt-0">About me</h1>
+                    <motion.article className="max-w-2xl mx-auto xl:mx-0" {...stagger} >
+                        <h2 className="text-center xl:text-start text-2xl md:text-3xl lg:text-4xl xl:text-5xl mt-4 xl:mt-0">About me</h2>
                         {aboutParagraphs.map((paragraph) =>
-                            <motion.p key={paragraph.text} className="text-center xl:text-start text-base lg:text-lg mt-4 px-8 lg:px-0" {...itemProps}>
+                            <motion.p key={paragraph.text} className="text-center xl:text-start text-base lg:text-lg mt-4 px-8 lg:px-0" {...fadeItem}>
                                 {paragraph.text}
                             </motion.p>
                         )}
                     </motion.article>
                 </motion.div>
 
-
                 {/* Education & Experience Timeline */}
-                <motion.div className="grid grid-cols-1 xl:grid-cols-2 max-w-7xl mx-auto" {...fadeProps} >
+                <motion.div className="grid grid-cols-1 xl:grid-cols-2 max-w-7xl mx-auto" {...fadeUp} >
                     <EducationPart />
                     {/*<div className="hidden md:block border-l-2 border-gray-700 h-96"></div>*/}
                     <ExperiencePart />
