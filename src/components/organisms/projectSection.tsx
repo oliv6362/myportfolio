@@ -4,15 +4,9 @@ import { projects } from '../../data/projects';
 import { Pager } from '../atoms/pager';
 import { motion, AnimatePresence } from 'framer-motion';
 import Wave from 'react-wavify';
+import { useProjectAnimations } from '../../utils/animationManager';
 
 const PAGE_SIZE = 3; // Number of cards shown per page
-
-// Animation variants for the page transition. (Left-to-right and right-to-left)
-const variants = {
-    enter: (direction: number) => ({ x: direction > 0 ? 300 : -300, opacity: 0 }),
-    center: { x: 0, opacity: 1 },
-    exit: (direction: number) => ({ x: direction < 0 ? 300 : -300, opacity: 0 }),
-};
 
 /**
  * ProjectSection component that renders a grid of project cards.  
@@ -27,6 +21,7 @@ const variants = {
  *     - Fades opacity for a smooth effect
  */
 const ProjectSection: React.FC = () => {
+    const { pager } = useProjectAnimations();
     const [page, setPage] = useState(0);
     const [direction, setDirection] = useState(0);
     if (!projects.length) return null;
@@ -59,15 +54,8 @@ const ProjectSection: React.FC = () => {
 
             {/* Project cards */}
             <AnimatePresence initial={false} custom={direction} mode="wait">
-                <motion.div
-                    key={page}
-                    custom={direction}
-                    variants={variants}
-                    initial="enter"
-                    animate="center"
-                    exit="exit"
-                    transition={{ duration: 0.5 }}
-                    className="grid grid-cols-1 xl:grid-cols-3 gap-12 xl:gap-8 place-items-center container mx-auto px-14 md:px-0">
+                <motion.div key={page} custom={direction} {...pager} 
+                className="grid grid-cols-1 xl:grid-cols-3 gap-12 xl:gap-8 place-items-center container mx-auto px-14 md:px-0">
                     {currentProjects.map((project) => (
                         <ProjectCard key={project.link} project={project} />
                     ))}

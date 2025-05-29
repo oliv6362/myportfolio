@@ -1,10 +1,10 @@
 import { FaGithub } from 'react-icons/fa';
 import { Project } from '../../data/projects';
 import { motion } from 'motion/react';
+import { useProjectAnimations } from '../../utils/animationManager';
 
 /**
  * ProjectCard component props.
- *
  */
 interface ProjectCardProps {
   project: Project;
@@ -14,21 +14,13 @@ interface ProjectCardProps {
  * ProjectCard component that renders a project in a card format.
  */
 export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
-  const scrollVariants = {
-    hidden: { opacity: 0, y: 0 },
-    visible: { opacity: 1, y: 0 },
-  };
+  const { fadeItem, button } = useProjectAnimations();
+
   return (
-    <motion.article
-      key={project.link}
-      className="flex max-w-md flex-col rounded-lg border-2 border-sky-950 bg-black hover:bg-slate-950 h-full"
-      initial="hidden"
-      whileInView="visible"
-      transition={{ duration: 0.75, ease: 'easeOut' }}
-      variants={scrollVariants} >
+    <motion.article key={project.link} className="flex max-w-md flex-col rounded-lg border-2 border-sky-950 bg-black hover:bg-slate-950 h-full xl:h-165" {...fadeItem} >
 
       {/* Thumbnail image */}
-      <img src={project.thumbnail} alt={`${project.title} thumbnail`} loading="lazy" className="w-full rounded-t-lg" role="img" />
+      <img src={project.thumbnail} alt={`${project.title} thumbnail`} loading="lazy" className="w-full rounded-t-lg h-75" role="img" />
 
       {/* Project title, tags, description */}
       <div className="px-4 pb-2">
@@ -48,14 +40,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
       {/* Footer with GitHub link */}
       <footer className="mt-auto flex items-center justify-between px-4 pb-2">
         <span className="font-bold text-gray-400">{project.footer}</span>
-        <motion.a
-          href={project.link}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label={`View ${project.title} on GitHub`}
-          className="inline-block p-2 text-4xl text-white"
-          whileHover={{ scale: 1.25 }}
-          whileTap={{ scale: 0.9 }} >
+        <motion.a href={project.link} target="_blank" rel="noopener noreferrer" aria-label={`View ${project.title} on GitHub`} className="inline-block p-2 text-4xl text-white" {...button}>
           <FaGithub />
         </motion.a>
       </footer>

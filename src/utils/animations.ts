@@ -13,6 +13,10 @@ export const fadeUpVariant: Variants = {
     hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } }
 };
 
+export const fadeItemVariant: Variants = {
+    hidden: { opacity: 0 }, visible: { opacity: 1, transition: { duration: 0.5 } }
+};
+
 
 //HomeSection animations
 export const slideLeftVariant: Variants = {
@@ -29,6 +33,10 @@ export const staggerVariant: Variants = {
     hidden: {}, visible: { transition: { staggerChildren: 0.3 } }
 };
 
-export const fadeItemVariant: Variants = {
-    hidden: { opacity: 0 }, visible: { opacity: 1, transition: { duration: 0.5 } }
-};
+
+// ProjectSection animations
+export const switchVariant: Variants = {
+    enter: (direction: number) => ({ x: direction > 0 ? 300 : -300, opacity: 0 }),
+    center: { x: 0, opacity: 1 },
+    exit: (direction: number) => ({ x: direction < 0 ? 300 : -300, opacity: 0 })
+}

@@ -22,9 +22,7 @@ export const Pager: React.FC<PagerProps> = ({ page, total, onPrev, onNext }) => 
             <button
                 onClick={onPrev}
                 disabled={page === 0}
-                className="rounded-full p-2 text-2xl text-white/70 
-                   enabled:hover:bg-white/10 disabled:opacity-40 disabled:cursor-not-allowed"
-            >
+                className="rounded-full p-2 text-2xl text-white/70 enabled:hover:bg-white/10 disabled:opacity-40 disabled:cursor-not-allowed">
                 <FaChevronLeft />
             </button>
 
@@ -33,23 +31,15 @@ export const Pager: React.FC<PagerProps> = ({ page, total, onPrev, onNext }) => 
                     <button
                         key={idx}
                         aria-label={`Go to page ${idx + 1}`}
-                        className={`
-                        w-3 h-3 rounded-full transition-colors 
-                         ${idx === page ? 'bg-white' : 'bg-white/40'} 
-                        cursor-pointer
-              
-                        `}
-                        onClick={() => idx !== page && (idx < page ? onPrev() : onNext())}
-                    />
+                        className={`w-3 h-3 rounded-full transition-colors  ${idx === page ? 'bg-white' : 'bg-white/40'} cursor-pointer`}
+                        onClick={() => idx !== page && (idx < page ? onPrev() : onNext())} />
                 ))}
             </div>
 
             <button
                 onClick={onNext}
                 disabled={page === total - 1}
-                className="rounded-full p-2 text-2xl text-white/70 
-                   enabled:hover:bg-white/10 disabled:opacity-40 disabled:cursor-not-allowed"
-            >
+                className="rounded-full p-2 text-2xl text-white/70 enabled:hover:bg-white/10 disabled:opacity-40 disabled:cursor-not-allowed">
                 <FaChevronRight />
             </button>
         </nav>

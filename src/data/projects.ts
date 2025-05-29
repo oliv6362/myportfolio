@@ -14,7 +14,7 @@ export interface Project {
 export const projects: Project[] = [
     {
         title: 'My portfoilio',
-        tags: ["typescript", "react", "vite", "tailwind", "html", "css"],
+        tags: ["typescript", "react", "vite", "tailwind", "Framer Motion"],
         description: 'This is my portfolio project, showcasing who I am, my skills, and the projects I’ve worked on. It also serves as the foundation for this website.',
         thumbnail: imageplc,
         footer: '2025',
@@ -30,24 +30,24 @@ export const projects: Project[] = [
     },
     {
         title: 'Movie & TV Series Catalog/Explorer',
-        tags: ["javascript", "react", "redux", "redux toolkit & query", "html", "css"],
-        description: 'Single-page application that uses TheMovieDb API. You can see popular, highest-rated, upcoming & favorited movies, or search for movies or TV Series. You can also view trailers.',
+        tags: ["javascript", "react", "redux", "redux toolkit & query"],
+        description: 'React application that uses TheMovieDb API.\n Key features include the ability to show popular, highest-rated, upcoming & favorited movies or TV Series. Being able to search for movies or TV Series, and view trailers.',
         thumbnail: imageplc,
         footer: '2024',
         link: 'https://github.com/oliv6362/ReactRTKPractice'
     },
     {
-        title: 'Car Details',
-        tags: ["javascript", "html", "css", "express", "sequelize", "orm", "sqlite", "sql", "pug", "templating engine", "scrum", "xp", "uml diagrams", "rest", "restul api's", "Full-stack", "frontend", "backend", "database"],
-        description: 'Project where you can look up car details by license plate, create and login as a user, and favorite specific cars for future references.',
+        title: 'Agile-Driven Car Explorer App.',
+        tags: ["javascript", "express", "sequelize", "orm", "sqlite", "pug", "templating engine", "scrum", "xp", "agile methodologies", "test-driven development", "uml diagrams", "e/r diagram", "database daigram", "rest", "restul api's", "Full-stack"],
+        description: 'Key features include the ability to look up car details by license plate, create and log in as a user, and favorite specific cars for future reference.',
         thumbnail: SBThumbnail,
         footer: '2023',
         link: 'https://github.com/superDatamatikere/superBiler'
     },
     {
-        title: 'Logistics Company',
-        tags: ["java", "html", "css", "mysql", "sql", "spring boot", "thymeleaf", "ooa/ood", "scrum", "uml diagrams", "clean code architecture", "design patterns", "Full-Stack", "Frontend", "Backend", "Database"],
-        description: 'Project that where you can register packages that arrive from drivers to storage facilities.',
+        title: 'Agile-Driven Driver Check-In App.',
+        tags: ["java", "mysql", "spring boot", "thymeleaf", "ooa/ood", "scrum", "agile methodologies", "uml diagrams", "e/r diagram", "database daigram", "clean code architecture", "design patterns", "Full-Stack"],
+        description: 'Self-service application for driver registration at storage facilities. Upon arrival, drivers check in by entering: Full name, driver’s license number, and Company affiliation.',
         thumbnail: LCThumbnail,
         footer: '2023',
         link: 'https://github.com/oliv6362/LogistikfirmaEksamenFinal'
