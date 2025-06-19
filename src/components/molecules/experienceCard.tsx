@@ -6,12 +6,6 @@ const ExperiencePart: React.FC = () => {
             position: "Internship - Full Stack Developer.",
             location: "Væksthuset Køge, Denmark.",
         },
-        {
-            year: "2017 - 2018",
-            company: "Netto",
-            position: "Shop Assistant.",
-            location: "Næstved, Denmark.",
-        },
     ]
 
     return (
