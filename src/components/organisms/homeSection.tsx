@@ -51,7 +51,7 @@ const HomeSection: React.FC = () => {
                         <Social />
                     </motion.div>
 
-                    <motion.a href="#contact"
+                    <motion.a href="#footer"
                         className="mt-4 inline-block rounded-lg bg-green-700 px-12 py-3 text-sm lg:text-base xl:text-lg transition-colors focus:shadow-outline hover:bg-green-900"
                         {...fadeUp} {...buttonHover} aria-label="Scroll to contact section" rel="noopener noreferrer">
                         Let's Connect

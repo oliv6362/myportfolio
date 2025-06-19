@@ -18,7 +18,6 @@ const Header: React.FC = () => {
                         <li><a href="#about" className="text-white hover:bg-green-700 rounded-lg p-2 transition-colors duration-350">About</a></li>
                         <li><a href="#skillSection" className="text-white hover:bg-green-700 rounded-lg p-2 transition-colors duration-350">Skills</a></li>
                         <li><a href="#projects" className="text-white hover:bg-green-700 rounded-lg p-2 transition-colors duration-350">Projects</a></li>
-                        <li><a href="#contact" className="text-white hover:bg-green-700 rounded-lg p-2 transition-colors duration-350">Contact</a></li>
                     </ul>
 
                     {/* Hamburger button */}
@@ -35,7 +34,6 @@ const Header: React.FC = () => {
                     <li><a href="#about" onClick={() => setIsOpen(false)} className="inline-block text-white py-2 hover:bg-green-700 rounded-lg p-2 transition-colors">About</a></li>
                     <li><a href="#skillSection" onClick={() => setIsOpen(false)} className="inline-block text-white py-2 hover:bg-green-700 rounded-lg p-2 transition-colors">Skills</a></li>
                     <li><a href="#projects" onClick={() => setIsOpen(false)} className="inline-block text-white py-2 hover:bg-green-700 rounded-lg p-2 transition-colors">Projects</a></li>
-                    <li><a href="#contact" onClick={() => setIsOpen(false)} className="inline-block text-white py-2 hover:bg-green-700 rounded-lg p-2 transition-colors">Contact</a></li>
                 </ul>
             </div>
 
