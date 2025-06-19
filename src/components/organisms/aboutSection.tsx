@@ -1,6 +1,6 @@
 import image1 from '../../assets/images/pic6.png';
-import EducationPart from '../molecules/educationPart';
-import ExperiencePart from '../molecules/experiencePart';
+import EducationPart from '../molecules/educationCard';
+import ExperiencePart from '../molecules/experienceCard';
 import { aboutParagraphs } from '../../data/abouts';
 import Wave from 'react-wavify';
 import { motion } from 'framer-motion';

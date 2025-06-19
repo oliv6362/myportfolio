@@ -32,11 +32,7 @@ export const SkillCategory: React.FC<SkillCategoryProps> = ({ title, skills, ful
 
             <ul className="flex flex-wrap justify-center gap-2 mt-4">
                 {skills.map((skill) => (
-                    <motion.li
-                        key={skill.name}
-                        className="w-max"
-                        {...fadeUp}
-                    >
+                    <motion.li key={skill.name} className="w-max" {...fadeUp} >
                         <SkillCard skill={skill} />
                     </motion.li>
                 ))}

@@ -67,7 +67,7 @@ const ProjectSection: React.FC = () => {
                 paused={true}
                 style={{ display: 'flex' }}
                 options={{
-                    height: 50,
+                    height: 85,
                     amplitude: 50,
                     speed: 0.15,
                     points: 3
