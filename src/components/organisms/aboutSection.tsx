@@ -2,7 +2,7 @@ import image1 from '../../assets/images/pic6.png';
 import EducationPart from '../molecules/educationCard';
 import ExperiencePart from '../molecules/experienceCard';
 import { aboutParagraphs } from '../../data/abouts';
-import Wave from 'react-wavify';
+import WaveDivider from '../atoms/waveDivider';
 import { motion } from 'framer-motion';
 import { useAboutAnimations } from '../../utils/animationManager';
 
@@ -46,16 +46,8 @@ const AboutSection: React.FC = () => {
             </div>
 
             {/*Wave divider */}
-            <Wave fill='#011533'
-                paused={true}
-                style={{ display: 'flex' }}
-                options={{
-                    height: 50,
-                    amplitude: 50,
-                    speed: 0.15,
-                    points: 3
-                }}
-            />
+            <WaveDivider color="#011533" />
+
         </section >
     );
 }

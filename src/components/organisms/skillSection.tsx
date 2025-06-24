@@ -1,5 +1,5 @@
 import { SkillCategory } from '../molecules/skillCategory';
-import Wave from 'react-wavify';
+import WaveDivider from '../atoms/waveDivider';
 import { skillFrontend, skillBackend, skillDatabase, skillLanguage, skillSystemDevelopment, skillPlatformsAndEnvironments } from '../../data/skills';
 
 /**
@@ -31,16 +31,8 @@ const SkillSection: React.FC = () => {
             </div>
 
             {/*Wave divider at the bottom */}
-            <Wave fill='#051937'
-                paused={true}
-                style={{ display: 'flex' }}
-                options={{
-                    height: 50,
-                    amplitude: 50,
-                    speed: 0.15,
-                    points: 3
-                }}
-            />
+            <WaveDivider color="#051937" />
+
         </section >
     );
 }

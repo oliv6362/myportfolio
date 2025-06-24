@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import Typewriter from '../atoms/typewriter';
 import Social from '../atoms/social';
-import Wave from 'react-wavify';
+import WaveDivider from '../atoms/waveDivider';
 import { AsciiLoader } from '../atoms/asciiLoader';
 import { useHomeAnimations } from '../../utils/animationManager';
 
@@ -65,16 +65,8 @@ const HomeSection: React.FC = () => {
             </div>
 
             {/* Waver divider */}
-            <Wave fill='#011533'
-                paused={true}
-                style={{ display: 'flex' }}
-                options={{
-                    height: 50,
-                    amplitude: 50,
-                    speed: 0.15,
-                    points: 3
-                }}
-            />
+            <WaveDivider color="#051937" />
+
         </motion.section>
     );
 };
