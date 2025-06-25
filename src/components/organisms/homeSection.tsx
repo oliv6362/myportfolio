@@ -46,12 +46,10 @@ const HomeSection: React.FC = () => {
                         reach out if you want to connect!
                     </motion.p>
 
-                    <motion.div {...fadeUp}>
-                        <Social />
-                    </motion.div>
+
 
                     <motion.a href="#footer"
-                        className="mt-4 inline-block rounded-lg bg-[#126FAB] px-12 py-3 text-sm lg:text-base xl:text-lg transition-colors focus:shadow-outline hover:bg-green-900"
+                        className="mt-6 inline-block rounded-lg bg-[#126FAB] px-12 py-3 text-sm lg:text-base xl:text-lg transition-colors"
                         {...fadeUp} {...buttonHover} aria-label="Scroll to contact section" rel="noopener noreferrer">
                         Let's Connect
                     </motion.a>
