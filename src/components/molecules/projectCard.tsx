@@ -17,15 +17,15 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   const { fadeItem, button } = useProjectAnimations();
 
   return (
-    <motion.article key={project.link} className="flex max-w-md flex-col rounded-lg border-2 border-[#103758] bg-[#040d12]  h-full" {...fadeItem} >
+    <motion.article key={project.link} className="flex max-w-md flex-col rounded-lg border-2 border-[#103758] bg-[#040d12]" {...fadeItem} >
 
       {/* Project title, tags, description */}
       <div className="p-4">
-        <h3 className="my-2 text-lg md:text-xl lg:text-2xl ">{project.title}</h3>
+        <h3 className="mt-4 text-lg md:text-xl lg:text-2xl ">{project.title}</h3>
 
-        <p className="whitespace-pre-line text-base lg:text-lg text-gray-400">{project.description}</p>
+        <p className="mt-4 whitespace-pre-line text-base lg:text-lg text-gray-400">{project.description}</p>
 
-        <ul className="mt-2 flex flex-wrap gap-2">
+        <ul className="mt-2 flex flex-wrap gap-2 mt-5">
           {project.tags.map((tag) => (
             <li key={tag} className="rounded-sm bg-[#126FAB] px-2 py-0.5 text-xs uppercase ">
               {tag}
@@ -35,7 +35,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
       </div>
 
       {/* Footer with GitHub link */}
-      <footer className="mt-auto flex items-center justify-end  px-4 pb-2">
+      <footer className="mt-auto flex items-center justify-end px-4 pb-2">
         <span className="font-bold">Learn More </span>
         <motion.a href={project.link} target="_blank" rel="noopener noreferrer" aria-label={`View ${project.title} on GitHub`} className="inline-block p-2 text-4xl text-white" {...button}>
           <FaGithub />
