@@ -29,5 +29,5 @@ export const AsciiLoader: React.FC = () => {
     return <div className="text-center text-gray-500">Loading animation…</div>;
   }
 
-  return <div className="text-green-600"> <AsciiAnimation frames={frames} fps={12} loop /> </div>
+  return <div className="text-[#126FAB]"> <AsciiAnimation frames={frames} fps={12} loop /> </div>
 };

@@ -17,7 +17,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   const { fadeItem, button } = useProjectAnimations();
 
   return (
-    <motion.article key={project.link} className="flex max-w-md flex-col rounded-lg border-2 border-sky-950 bg-black hover:bg-slate-950 h-full" {...fadeItem} >
+    <motion.article key={project.link} className="flex max-w-md flex-col rounded-lg border-2 border-[#103758] bg-[#040d12]  h-full" {...fadeItem} >
 
       {/* Project title, tags, description */}
       <div className="p-4">
@@ -27,7 +27,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
 
         <ul className="mt-2 flex flex-wrap gap-2">
           {project.tags.map((tag) => (
-            <li key={tag} className="rounded-sm border border-green-500 bg-gray-900 px-2 py-0.5 text-xs uppercase text-green-500">
+            <li key={tag} className="rounded-sm bg-[#126FAB] px-2 py-0.5 text-xs uppercase ">
               {tag}
             </li>
           ))}
@@ -35,8 +35,8 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
       </div>
 
       {/* Footer with GitHub link */}
-      <footer className="mt-auto flex items-center justify-between px-4 pb-2">
-        <span className="font-bold text-gray-400">Learn more click here </span>
+      <footer className="mt-auto flex items-center justify-end  px-4 pb-2">
+        <span className="font-bold">Learn More </span>
         <motion.a href={project.link} target="_blank" rel="noopener noreferrer" aria-label={`View ${project.title} on GitHub`} className="inline-block p-2 text-4xl text-white" {...button}>
           <FaGithub />
         </motion.a>

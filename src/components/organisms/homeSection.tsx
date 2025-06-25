@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion';
 import Typewriter from '../atoms/typewriter';
 import Social from '../atoms/social';
-import WaveDivider from '../atoms/waveDivider';
 import { AsciiLoader } from '../atoms/asciiLoader';
 import { useHomeAnimations } from '../../utils/animationManager';
 
@@ -28,8 +27,8 @@ const HomeSection: React.FC = () => {
 
 
     return (
-        <motion.section id="home" className="bg-[#011533] overflow-hidden" {...containerStagger} >
-            <div className="flex flex-col lg:flex-row lg:h-screen xl:h-screen items-center justify-center px-20 pt-30 lg:pt-0 xl:pt-0">
+        <motion.section id="home" className="bg-[#040d12] overflow-hidden" {...containerStagger} >
+            <div className="flex flex-col lg:flex-row lg:h-screen items-center justify-center px-20 pt-30 lg:pt-0 xl:pt-0">
 
                 {/* Left side */}
                 <div className="max-w-2xl lg:mr-15 xl:mr-20 text-center lg:text-left xl:text-left">
@@ -37,7 +36,7 @@ const HomeSection: React.FC = () => {
                         Hello! I'm Oliver Nordby Hansen
                     </motion.h1>
 
-                    <motion.h2 className="mt-2 text-green-700 text-lg md:text-xl lg:text-2xl xl:text-4xl font-bold" {...slideRight}>
+                    <motion.h2 className="mt-2 text-[#126FAB] text-lg md:text-xl lg:text-2xl xl:text-4xl font-bold" {...slideRight}>
                         I'm a{' '}
                         <Typewriter texts={titles} delay={50} infinite />
                     </motion.h2>
@@ -52,7 +51,7 @@ const HomeSection: React.FC = () => {
                     </motion.div>
 
                     <motion.a href="#footer"
-                        className="mt-4 inline-block rounded-lg bg-green-700 px-12 py-3 text-sm lg:text-base xl:text-lg transition-colors focus:shadow-outline hover:bg-green-900"
+                        className="mt-4 inline-block rounded-lg bg-[#126FAB] px-12 py-3 text-sm lg:text-base xl:text-lg transition-colors focus:shadow-outline hover:bg-green-900"
                         {...fadeUp} {...buttonHover} aria-label="Scroll to contact section" rel="noopener noreferrer">
                         Let's Connect
                     </motion.a>
@@ -65,7 +64,8 @@ const HomeSection: React.FC = () => {
             </div>
 
             {/* Waver divider */}
-            <WaveDivider color="#051937" />
+            <hr className="h-1 border-t-0 bg-gradient-to-r opacity-25 via-[#126FAB] mb-5" />
+
 
         </motion.section>
     );

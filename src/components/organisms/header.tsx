@@ -6,7 +6,7 @@ const Header: React.FC = () => {
 
     return (
         <header className="fixed top-+ left-0 w-full z-50">
-            <nav className="bg-[#011533] pt-4 " >
+            <nav className="bg-[#040d12] pt-4 px-4" >
                 <div className="container mx-auto flex items-center justify-between">
 
                     {/* Logo */}
@@ -30,7 +30,7 @@ const Header: React.FC = () => {
             </nav>
 
             {/* Mobile menu */}
-            <div id="mobile-menu" className={` bg-[#011533] px-4 pb-2 transition-max-h duration-300 ease-in-out overflow-hidden ${isOpen ? 'max-h-screen' : 'max-h-0'}`}>
+            <div id="mobile-menu" className={` bg-[#040d12] px-4 pb-2 transition-max-h duration-300 ease-in-out overflow-hidden ${isOpen ? 'max-h-screen' : 'max-h-0'}`}>
                 <ul className="flex flex-col space-y-2 text-end pt-0.5">
                     <li><a href="#home" onClick={() => setIsOpen(false)} className="inline-block text-white py-2 hover:bg-green-700 rounded-lg p-2 transition-colors">Home</a></li>
                     <li><a href="#about" onClick={() => setIsOpen(false)} className="inline-block text-white py-2 hover:bg-green-700 rounded-lg p-2 transition-colors">About</a></li>

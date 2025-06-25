@@ -2,7 +2,6 @@ import image1 from '../../assets/images/pic6.png';
 import EducationPart from '../molecules/educationCard';
 import ExperiencePart from '../molecules/experienceCard';
 import { aboutParagraphs } from '../../data/abouts';
-import WaveDivider from '../atoms/waveDivider';
 import { motion } from 'framer-motion';
 import { useAboutAnimations } from '../../utils/animationManager';
 
@@ -18,7 +17,7 @@ const AboutSection: React.FC = () => {
     const { fadeItem, stagger, fadeUp } = useAboutAnimations();
 
     return (
-        <section id="about" className="bg-[#051937] scroll-mt-16" >
+        <section id="about" className="bg-[#040d12] overflow-hidden" >
             <div className="py-10 md:px-4">
 
                 {/* Image + Intro Text */}
@@ -46,7 +45,8 @@ const AboutSection: React.FC = () => {
             </div>
 
             {/*Wave divider */}
-            <WaveDivider color="#011533" />
+            <hr className="h-1 border-t-0 bg-gradient-to-r opacity-25 via-[#126FAB] m-15" />
+
 
         </section >
     );

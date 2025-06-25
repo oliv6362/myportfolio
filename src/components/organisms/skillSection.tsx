@@ -1,5 +1,4 @@
 import { SkillCategory } from '../molecules/skillCategory';
-import WaveDivider from '../atoms/waveDivider';
 import { skillFrontend, skillBackend, skillDatabase, skillLanguage, skillSystemDevelopment, skillPlatformsAndEnvironments } from '../../data/skills';
 
 /**
@@ -13,7 +12,7 @@ import { skillFrontend, skillBackend, skillDatabase, skillLanguage, skillSystemD
  */
 const SkillSection: React.FC = () => {
     return (
-        <section id="skillSection" className="bg-[#011533] scroll-mt-16">
+        <section id="skillSection" className="bg-[#040D12] overflow-hidden">
             <div className="max-w-7xl mx-auto pb-10 px-14 xl:px-0">
                 <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-center mb-6 md:mb-10 lg:mb-15">Skills</h2>
 
@@ -31,7 +30,8 @@ const SkillSection: React.FC = () => {
             </div>
 
             {/*Wave divider at the bottom */}
-            <WaveDivider color="#051937" />
+            <hr className="h-1 border-t-0 bg-gradient-to-r opacity-25 via-[#126FAB] m-15" />
+
 
         </section >
     );

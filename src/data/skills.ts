@@ -10,8 +10,8 @@ export const skillFrontend: Skill[] = [
     { name: "CSS", icon: 'skill-icons:css' },
     { name: "Tailwind CSS", icon: 'skill-icons:tailwindcss-dark' },
     { name: "Bootstrap", icon: 'skill-icons:bootstrap' },
-    { name: "Jest (Testing)", icon: 'skill-icons:jest' },
-    { name: "Pug (Templating Engine)", icon: 'skill-icons:pug-dark' },
+    { name: "Jest", icon: 'skill-icons:jest' },
+    { name: "Pug", icon: 'skill-icons:pug-dark' },
     { name: "Vite", icon: 'skill-icons:vite-dark' },
     { name: "Webpack", icon: 'skill-icons:webpack-dark' },
 ];
