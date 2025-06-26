@@ -11,7 +11,7 @@ const contactinfo = [
   },
   {
     icon: 'mdi:map-marker',
-    text: 'Bøgesøvej 55K, 4700, Mogenstrup, Næstved, Denmark',
+    text: '4700, Mogenstrup, Næstved, Denmark',
   },
 ];
 

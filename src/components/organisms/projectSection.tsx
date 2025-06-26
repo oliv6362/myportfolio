@@ -15,7 +15,7 @@ const ProjectSection: React.FC = () => {
 
             {/* Project cards */}
             <AnimatePresence >
-                <motion.div className="flex flex-wrap justify-center gap-12 xl:gap-8 mx-auto">
+                <motion.div className="flex flex-wrap justify-center gap-8 mx-auto project-flex-container">
                     {projects.map((project) => (
                         <ProjectCard key={project.link} project={project} />
                     ))}

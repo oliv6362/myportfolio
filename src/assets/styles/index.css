@@ -30,3 +30,37 @@ code {
   margin-left: 2px !important;
   animation: blink 1s step-start infinite !important;
 }
+
+.project-flex-container {
+  padding-left: 0rem;
+  padding-right: 0rem;
+}
+
+@media (min-width: 1903px) {
+  .project-flex-container {
+    padding-left: 15rem;
+    padding-right: 15rem;
+  }
+}
+
+@media (min-width: 2368px) {
+  .project-flex-container {
+    padding-left: 25rem;
+    padding-right: 25rem;
+  }
+}
+
+@media (min-width: 2703px) {
+  .project-flex-container {
+    padding-left: 40rem;
+    padding-right: 40rem;
+  }
+}
+
+
+@media (min-width: 3100px) {
+  .project-flex-container {
+    padding-left: 50rem;
+    padding-right: 50rem;
+  }
+}

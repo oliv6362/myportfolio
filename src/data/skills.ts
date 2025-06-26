@@ -27,7 +27,7 @@ export const skillDatabase: Skill[] = [
     { name: "MySQL", icon: 'skill-icons:mysql-dark' },
     { name: "SQLite", icon: 'skill-icons:sqlite' },
     { name: "MongoDB", icon: 'skill-icons:mongodb' },
-    { name: "Sequelize (ORM)", icon: 'skill-icons:sequelize-dark' },
+    { name: "Sequelize", icon: 'skill-icons:sequelize-dark' },
 ];
 
 export const skillLanguage: Skill[] = [
@@ -43,7 +43,7 @@ export const skillSystemDevelopment: Skill[] = [
     { name: "SOLID", icon: '' },
     { name: "UML", icon: '' },
     { name: "Database normalization", icon: '' },
-    { name: "Object-oriented analysis & design (OOA/OOD)", icon: '' },
+    { name: "Object-oriented analysis & design", icon: '' },
     { name: "Clean Code Architecture", icon: '' },
     { name: "Design Patterns", icon: '' },
 ];
