@@ -1,4 +1,4 @@
-import image1 from '../../assets/images/pic6.png';
+import ONHProtrait from '../../assets/images/protrait/ONH.png';
 import EducationPart from '../molecules/educationCard';
 import ExperiencePart from '../molecules/experienceCard';
 import { aboutParagraphs } from '../../data/abouts';
@@ -23,7 +23,7 @@ const AboutSection: React.FC = () => {
                 {/* Image + Intro Text */}
                 <motion.div className="flex flex-col xl:flex-row mx-auto justify-center" {...fadeUp}>
                     <div className="flex justify-center mx-auto xl:mx-0 h-49 w-48 md:h-65 md:w-64 lg:h-98 lg:w-96 object-contain xl:mr-20 xl:mt-6">
-                        <img className='rounded-lg' src={image1} alt="placeholder" />
+                        <img className='rounded-lg' src={ONHProtrait} alt="placeholder" />
                     </div>
 
                     <motion.article className="max-w-2xl mx-auto xl:mx-0" {...stagger} >
