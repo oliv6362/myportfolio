@@ -1,7 +1,5 @@
 {
   "semi": false,
-  "printWidth": 120,
-  "plugins": [
-    "prettier-plugin-tailwindcss"
-  ]
+  "printWidth": 200,
+  "plugins": ["prettier-plugin-tailwindcss"]
 }
