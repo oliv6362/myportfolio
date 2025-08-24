@@ -1,7 +1,7 @@
-import { motion } from 'framer-motion';
-import { SkillCard } from './skillCard';
-import type { Skill } from '../../data/skills';
-import { useSkillAnimations } from '../../utils/animationManager';
+import { motion } from "framer-motion"
+import { SkillCard } from "./skillCard"
+import type { Skill } from "../../data/skills"
+import { useSkillAnimations } from "../../utils/animationManager"
 
 /**
  * Heading text for this category (e.g. “Frontend”)
@@ -9,9 +9,9 @@ import { useSkillAnimations } from '../../utils/animationManager';
  * If true, span the full width of the grid (uses `col-span-3`)
  */
 interface SkillCategoryProps {
-    title: string;
-    skills: Skill[];
-    fullHeight?: boolean;
+  title: string
+  skills: Skill[]
+  fullHeight?: boolean
 }
 
 /**
@@ -19,22 +19,21 @@ interface SkillCategoryProps {
  * fade-up animation on scroll
  */
 export const SkillCategory: React.FC<SkillCategoryProps> = ({ title, skills, fullHeight = false }) => {
-    const { fadeUp } = useSkillAnimations();
-    const spanClasses = fullHeight ? 'xl:col-span-1' : '';
+  const { fadeUp } = useSkillAnimations()
+  const spanClasses = fullHeight ? "xl:col-span-1" : ""
 
-    return (
-        <motion.div className={`${spanClasses} bg-[#040D12] p-5 rounded-lg text-center transition-transform duration-300 border-2 border-[#103758] col-span-3`} >
+  return (
+    <motion.div className={`${spanClasses} col-span-3 rounded-lg border-2 border-[#103758] bg-[#040D12] p-5 text-center transition-transform duration-300`}>
+      <h3 className="mb-4 text-xl md:text-2xl lg:text-3xl">{title}</h3>
+      <hr className="h-px border-t-0 bg-gradient-to-r opacity-25 dark:via-neutral-400" />
 
-            <h3 className="text-xl md:text-2xl lg:text-3xl mb-4">{title}</h3>
-            <hr className="h-px border-t-0 bg-gradient-to-r opacity-25 dark:via-neutral-400" />
-
-            <ul className="flex flex-wrap justify-center gap-2 mt-4">
-                {skills.map((skill) => (
-                    <motion.li key={skill.name} className="w-max" {...fadeUp} >
-                        <SkillCard skill={skill} />
-                    </motion.li>
-                ))}
-            </ul>
-        </motion.div>
-    );
-};
+      <ul className="mt-4 flex flex-wrap justify-center gap-2">
+        {skills.map((skill) => (
+          <motion.li key={skill.name} className="w-max" {...fadeUp}>
+            <SkillCard skill={skill} />
+          </motion.li>
+        ))}
+      </ul>
+    </motion.div>
+  )
+}
