@@ -1,33 +1,38 @@
-import React, { useState, useEffect } from 'react';
-import { AsciiAnimation } from './asciiAnimation';
+import React, { useState, useEffect } from "react"
+import { AsciiAnimation } from "./asciiAnimation"
 
 /**
  * AsciiLoader compontant that:
- * 1. Fetches a plain‐text ASCII animation from `/ascii.txt`, and splits the text on one or more blank lines.  
- * 5. Displays a “Loading animation…” placeholder until the frames are available.  
+ * 1. Fetches a plain‐text ASCII animation from `/ascii.txt`, and splits the text on one or more blank lines.
+ * 5. Displays a “Loading animation…” placeholder until the frames are available.
  * 6. Logs any fetch or parsing errors to the console.
  */
 export const AsciiLoader: React.FC = () => {
-  const [frames, setFrames] = useState<string[]>([]);
+  const [frames, setFrames] = useState<string[]>([])
 
   useEffect(() => {
     async function loadFrames() {
       try {
-        const res = await fetch('/ascii.txt');
-        const text = await res.text();
-        const raw = text.split(/\r?\n[ \t]*\r?\n+/);
-        const clean = raw.map(f => f.replace(/\r/g, '').trimEnd()).filter(f => f);
-        setFrames(clean);
+        const res = await fetch("/ascii.txt")
+        const text = await res.text()
+        const raw = text.split(/\r?\n[ \t]*\r?\n+/)
+        const clean = raw.map((f) => f.replace(/\r/g, "").trimEnd()).filter((f) => f)
+        setFrames(clean)
       } catch (err) {
-        console.error('Failed to load ASCII frames', err);
+        console.error("Failed to load ASCII frames", err)
       }
     }
-    loadFrames();
-  }, []);
+    loadFrames()
+  }, [])
 
   if (!frames.length) {
-    return <div className="text-center text-gray-500">Loading animation…</div>;
+    return <div className="text-center text-gray-500">Loading animation…</div>
   }
 
-  return <div className="text-[#126FAB]"> <AsciiAnimation frames={frames} fps={12} loop /> </div>
-};
+  return (
+    <div className="text-[#126FAB]">
+      {" "}
+      <AsciiAnimation frames={frames} fps={12} loop />{" "}
+    </div>
+  )
+}
