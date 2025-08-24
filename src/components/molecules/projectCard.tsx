@@ -36,7 +36,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
 
       {/* Footer with GitHub link */}
       <footer className="mt-auto flex items-center justify-end px-4 pb-2">
-        <span className="font-bold">Learn More </span>
+        <span className="font-bold">See My Work</span>
         <motion.a href={project.link} target="_blank" rel="noopener noreferrer" aria-label={`View ${project.title} on GitHub`} className="inline-block p-2 text-4xl text-white" {...button}>
           <FaGithub />
         </motion.a>
